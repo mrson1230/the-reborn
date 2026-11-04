@@ -48,6 +48,14 @@ export interface ApplicationSubmission {
   productName: string;
   productBrand: string;
   productImage: string;
+  productModelCode?: string;
+  productTierName?: string;
+  // Second selected appliance
+  product2Name?: string;
+  product2Brand?: string;
+  product2Image?: string;
+  product2ModelCode?: string;
+  product2TierName?: string;
   userName: string;
   phoneNumber: string;
   preferredTime: string;

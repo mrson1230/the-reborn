@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Trash2, Download, RefreshCw, CheckCircle2, User, Phone, MapPin, Lock } from 'lucide-react';
+import { X, Trash2, Download, RefreshCw, CheckCircle2, User, Phone, MapPin, Lock, Package } from 'lucide-react';
 import { ApplicationSubmission } from '../types';
 
 interface AdminDrawerProps {
@@ -40,7 +40,7 @@ export const AdminDrawer: React.FC<AdminDrawerProps> = ({
         <div className="p-4 sm:p-5 bg-slate-900 text-white flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="font-bold text-base">더리본 가전신청 접수 관리 대장</h3>
+              <h3 className="font-bold text-base">더리본 가전 2종 접수 관리 대장</h3>
               <span className="text-xs bg-rose-600 font-bold px-2 py-0.5 rounded">
                 총 {submissions.length}건
               </span>
@@ -50,7 +50,7 @@ export const AdminDrawer: React.FC<AdminDrawerProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-300 mt-0.5">
-              실시간 접수된 가전 전액지원 상담 신청 내역입니다. (비밀번호: 3927 인증됨)
+              실시간 접수된 가전 2종 전액지원 상담 신청 내역입니다. (보안인증 완료)
             </p>
           </div>
           <button
@@ -129,26 +129,57 @@ export const AdminDrawer: React.FC<AdminDrawerProps> = ({
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-300 p-0.5 flex items-center justify-center">
-                    <img
-                      src={sub.productImage}
-                      alt={sub.productName}
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
-                      }}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="text-[11px] font-bold text-rose-600">
-                      [{sub.productBrand}] 100% 지원
+                {/* Dual Products Row */}
+                <div className="space-y-1.5">
+                  {/* Product 1 */}
+                  <div className="flex items-center gap-2.5 p-2 bg-white rounded-lg border border-slate-200">
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-300 p-0.5 flex items-center justify-center">
+                      <img
+                        src={sub.productImage}
+                        alt={sub.productName}
+                        referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
+                        }}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
-                    <div className="font-bold text-sm text-slate-900 truncate">
-                      {sub.productName}
+                    <div className="min-w-0 flex-1">
+                      <div className="text-[10px] font-bold text-rose-600 flex items-center gap-1">
+                        <span>가전 ① (1차)</span>
+                        <span>[{sub.productBrand}] 100% 지원</span>
+                      </div>
+                      <div className="font-bold text-xs text-slate-900 truncate">
+                        {sub.productName}
+                      </div>
                     </div>
                   </div>
+
+                  {/* Product 2 */}
+                  {sub.product2Name && (
+                    <div className="flex items-center gap-2.5 p-2 bg-white rounded-lg border border-slate-200">
+                      <div className="w-10 h-10 rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-300 p-0.5 flex items-center justify-center">
+                        <img
+                          src={sub.product2Image || sub.productImage}
+                          alt={sub.product2Name}
+                          referrerPolicy="no-referrer"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
+                          }}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-[10px] font-bold text-amber-600 flex items-center gap-1">
+                          <span>가전 ② (2차)</span>
+                          <span>[{sub.product2Brand}] 100% 지원</span>
+                        </div>
+                        <div className="font-bold text-xs text-slate-900 truncate">
+                          {sub.product2Name}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-xs bg-white p-2.5 rounded-lg border border-slate-200">

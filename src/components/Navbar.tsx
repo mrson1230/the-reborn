@@ -113,7 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <button
             onClick={onOpenAdmin}
-            title="접수 관리 대장 (비밀번호 3927)"
+            title="접수 관리 대장"
             className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 text-xs text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors cursor-pointer"
           >
             <Lock className="w-3 h-3 text-rose-500" />
@@ -208,7 +208,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span>접수관리자 대장</span>
             </div>
             <span className="text-[10px] bg-rose-50 text-rose-600 border border-rose-200 font-bold px-1.5 py-0.5 rounded">
-              비밀번호(3927)
+              관리자 전용
             </span>
           </button>
           <div className="pt-2">

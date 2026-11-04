@@ -81,7 +81,8 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
   if (!submission) return null;
 
   const handleCopyReceipt = () => {
-    const textToCopy = `[더리본 가전 전액지원 접수증]\n접수번호: ${submission.applicationNumber}\n신청자: ${submission.userName}\n신청가전: [${submission.productBrand}] ${submission.productName}\n지원혜택: 본인부담금 0원 전액지원\n상담희망: ${submission.preferredTime}\n지역: ${submission.region}`;
+    const p2Text = submission.product2Name ? `\n신청가전 ②: [${submission.product2Brand || 'LG전자'}] ${submission.product2Name}` : '';
+    const textToCopy = `[더리본 가전 2종 전액지원 접수증]\n접수번호: ${submission.applicationNumber}\n신청자: ${submission.userName}\n신청가전 ①: [${submission.productBrand}] ${submission.productName}${p2Text}\n지원혜택: 가전 2종 모두 본인부담금 0원 전액지원\n상담희망: ${submission.preferredTime}\n지역: ${submission.region}`;
     navigator.clipboard?.writeText?.(textToCopy);
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
@@ -97,7 +98,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
               <CheckCircle2 className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
-              <h3 className="font-bold text-sm sm:text-base text-white">상담 예약 접수 완료</h3>
+              <h3 className="font-bold text-sm sm:text-base text-white">가전 2종 상담 예약 접수 완료</h3>
               <p className="text-[11px] text-slate-300">
                 {submission.phoneNumber} 번호로 안내 메시지가 전송되었습니다.
               </p>
@@ -233,33 +234,41 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                 <div className="p-4 space-y-3 text-xs leading-relaxed">
                   <div className="pb-2 border-b border-slate-100">
                     <p className="font-extrabold text-sm text-slate-900 mb-1">
-                      [더리본] 가전 100% 전액지원 상담 예약 완료
+                      [더리본] 가전 2종 100% 전액지원 상담 예약 완료
                     </p>
                     <p className="text-slate-600">
                       안녕하세요, <strong>{submission.userName}</strong> 고객님!
                       <br />
-                      신청하신 가전제품 무료 지원 상담 예약이 정상 접수되었습니다.
+                      신청하신 가전제품 2종 무료 지원 상담 예약이 정상 접수되었습니다.
                     </p>
                   </div>
 
                   {/* Summary Box */}
-                  <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 space-y-1.5">
+                  <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 space-y-2">
                     <div className="flex justify-between">
                       <span className="text-slate-400 font-medium">접수번호</span>
                       <span className="font-mono font-bold text-slate-900">
                         {submission.applicationNumber}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-400 font-medium">신청가전</span>
-                      <span className="font-bold text-rose-600 truncate max-w-[200px] text-right">
+                    <div className="flex justify-between items-start gap-2">
+                      <span className="text-slate-400 font-medium shrink-0">가전 ① (1차)</span>
+                      <span className="font-bold text-rose-600 truncate max-w-[220px] text-right">
                         [{submission.productBrand}] {submission.productName}
                       </span>
                     </div>
+                    {submission.product2Name && (
+                      <div className="flex justify-between items-start gap-2">
+                        <span className="text-slate-400 font-medium shrink-0">가전 ② (2차)</span>
+                        <span className="font-bold text-amber-600 truncate max-w-[220px] text-right">
+                          [{submission.product2Brand}] {submission.product2Name}
+                        </span>
+                      </div>
+                    )}
                     <div className="flex justify-between">
                       <span className="text-slate-400 font-medium">지원혜택</span>
-                      <span className="font-bold text-slate-900">
-                        본인부담금 0원 (전액지원)
+                      <span className="font-bold text-emerald-700">
+                        가전 2종 모두 본인부담금 0원 (전액지원)
                       </span>
                     </div>
                     <div className="flex justify-between">
@@ -277,7 +286,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                   <div className="text-[11px] text-slate-500 leading-snug pt-1">
                     * 전문 상담원이 순차적으로 안심 해피콜(발신번호: <strong>1588-0000</strong>)을 드릴 예정입니다.
                     <br />
-                    * 원활한 가전 배송 및 설치를 위해 전화를 꼭 받아주세요.
+                    * 원활한 가전 2종 배송 및 설치 일정 조율을 위해 전화를 꼭 받아주세요.
                   </div>
 
                   {/* Kakao Button Affordances */}
@@ -321,19 +330,22 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                 </div>
 
                 <div className="font-bold text-sm text-slate-900">
-                  [더리본] 가전 100% 전액지원 상담 접수 완료 안내
+                  [더리본] 가전 2종 100% 전액지원 상담 접수 완료 안내
                 </div>
 
                 <p className="text-slate-700">
                   안녕하세요, {submission.userName} 고객님.
                   <br />
-                  더리본 가전 전액지원 이벤트 신청이 정상 처리되었습니다.
+                  더리본 가전 2종 전액지원 이벤트 신청이 정상 처리되었습니다.
                 </p>
 
                 <div className="p-2.5 bg-slate-50 rounded-lg font-mono text-[11px] text-slate-700 space-y-1 border border-slate-200">
                   <div>■ 접수번호: {submission.applicationNumber}</div>
-                  <div>■ 신청가전: [{submission.productBrand}] {submission.productName}</div>
-                  <div>■ 지원조건: 본인부담금 0원 / 본사 무료설치</div>
+                  <div>■ 신청가전 ①: [{submission.productBrand}] {submission.productName}</div>
+                  {submission.product2Name && (
+                    <div>■ 신청가전 ②: [{submission.product2Brand}] {submission.product2Name}</div>
+                  )}
+                  <div>■ 지원조건: 가전 2종 모두 본인부담금 0원 / 본사 무료설치</div>
                   <div>■ 희망시간: {submission.preferredTime}</div>
                   <div>■ 설치지역: {submission.region}</div>
                 </div>
@@ -358,29 +370,55 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
             </div>
           )}
 
-          {/* Selected Product Miniature Card */}
-          <div className="bg-white rounded-xl p-3 border border-slate-200 flex items-center gap-3">
-            <div className="w-12 h-12 rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200 p-0.5 flex items-center justify-center">
-              <img
-                src={submission.productImage}
-                alt={submission.productName}
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
-                }}
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="min-w-0 flex-1">
-              <span className="text-[10px] font-bold text-rose-600 bg-rose-50 px-1.5 py-0.2 rounded border border-rose-200">
-                100% 전액 지원 확정
-              </span>
-              <p className="text-xs font-bold text-slate-900 truncate mt-0.5">
-                {submission.productName}
-              </p>
-              <p className="text-[11px] text-slate-500">
-                본사 전문 기사 배송 및 무료 설치 예정
-              </p>
+          {/* Selected Product Miniature Cards (Dual Display) */}
+          <div className="space-y-2">
+            <div className="text-xs font-bold text-slate-700">신청된 가전 2종 내역</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="bg-white rounded-xl p-2.5 border border-slate-200 flex items-center gap-2.5">
+                <div className="w-10 h-10 rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200 p-0.5 flex items-center justify-center">
+                  <img
+                    src={submission.productImage}
+                    alt={submission.productName}
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
+                    }}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <span className="text-[9px] font-bold text-rose-600 bg-rose-50 px-1 py-0.2 rounded border border-rose-200">
+                    가전 ① 전액지원
+                  </span>
+                  <p className="text-xs font-bold text-slate-900 truncate mt-0.5">
+                    {submission.productName}
+                  </p>
+                </div>
+              </div>
+
+              {submission.product2Name && (
+                <div className="bg-white rounded-xl p-2.5 border border-slate-200 flex items-center gap-2.5">
+                  <div className="w-10 h-10 rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200 p-0.5 flex items-center justify-center">
+                    <img
+                      src={submission.product2Image || submission.productImage}
+                      alt={submission.product2Name}
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
+                      }}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <span className="text-[9px] font-bold text-amber-700 bg-amber-50 px-1 py-0.2 rounded border border-amber-200">
+                      가전 ② 전액지원
+                    </span>
+                    <p className="text-xs font-bold text-slate-900 truncate mt-0.5">
+                      {submission.product2Name}
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

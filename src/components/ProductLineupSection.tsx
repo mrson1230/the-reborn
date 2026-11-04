@@ -1,16 +1,20 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Check, ArrowRight, Award, ShieldCheck, Flame, ChevronDown } from 'lucide-react';
+import { Search, Check, ArrowRight, Award, ShieldCheck, Flame, ChevronDown, Plus, Trash2, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Product, Brand, Category, ProductTier } from '../types';
 import { PRODUCTS_DATA, CATEGORIES_FILTER, TIERS_FILTER } from '../data/products';
 
 interface ProductLineupSectionProps {
-  onSelectProduct: (product: Product) => void;
-  selectedProductId?: string;
+  selectedProducts: Product[];
+  onToggleProduct: (product: Product, slotIndex?: 0 | 1) => void;
+  onRemoveProduct?: (index: 0 | 1) => void;
+  onGoToForm: () => void;
 }
 
 export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
-  onSelectProduct,
-  selectedProductId,
+  selectedProducts,
+  onToggleProduct,
+  onRemoveProduct,
+  onGoToForm,
 }) => {
   const [selectedBrand, setSelectedBrand] = useState<Brand | 'cuckoo' | 'wellness' | 'all'>('all');
   const [selectedTier, setSelectedTier] = useState<ProductTier>('all');
@@ -18,13 +22,18 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState<number>(24);
 
+  const product1 = selectedProducts[0];
+  const product2 = selectedProducts[1];
+  const selectedCount = (product1 ? 1 : 0) + (product2 ? 1 : 0);
+
   const filteredProducts = useMemo(() => {
     return PRODUCTS_DATA.filter((p) => {
       let matchBrand = true;
       if (selectedBrand === 'samsung') matchBrand = p.brand === 'samsung';
       else if (selectedBrand === 'lg') matchBrand = p.brand === 'lg';
       else if (selectedBrand === 'cuckoo') matchBrand = p.brandName === '쿠쿠';
-      else if (selectedBrand === 'wellness') matchBrand = ['브람스', '세라젬', '코지마', '리진바이오', '올리즈', '비에스소닉'].includes(p.brandName);
+      else if (selectedBrand === 'wellness')
+        matchBrand = ['브람스', '세라젬', '코지마', '리진바이오', '올리즈', '비에스소닉'].includes(p.brandName);
       else if (selectedBrand === 'other') matchBrand = p.brand === 'other';
 
       const matchTier = selectedTier === 'all' || p.tier === selectedTier;
@@ -54,17 +63,166 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
     <section id="lineup" className="py-16 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-bold mb-2">
-            <Award className="w-3.5 h-3.5 text-amber-600" />
-            <span>더리본 리빙플러스 공식 홈페이지 가전 200개 모델 전수 탑재</span>
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-900 text-xs font-bold mb-2">
+            <Sparkles className="w-3.5 h-3.5 text-rose-600" />
+            <span>최대 2개 가전제품 동시 100% 전액 지원</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight text-balance">
             더리본 100% 전액 지원 공식 가전 라인업
           </h2>
           <p className="mt-2 text-slate-600 text-sm sm:text-base">
-            더리본 공식 사이트(the-reborn.co.kr/product/plus.asp)에 등록된 모든 플래그십 가전(총 200종)을 빠짐없이 한눈에 비교하고 신청하실 수 있습니다.
+            원하시는 가전을 <strong className="text-rose-600 font-extrabold">2개까지 선택</strong>하여 본인부담금 0원으로 동시에 지원받으실 수 있습니다.
           </p>
+        </div>
+
+        {/* Dual Selection Status Bar (Active Selection Basket) */}
+        <div className="mb-8 p-4 sm:p-5 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white rounded-2xl shadow-lg border border-slate-700">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-slate-700/80">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-extrabold text-sm sm:text-base">
+                내가 선택한 가전 (총 <span className="text-rose-400 font-mono text-lg">{selectedCount}</span>/2개)
+              </span>
+              <span className="text-xs bg-rose-600 text-white font-bold px-2 py-0.5 rounded-full">
+                본인부담금 총 0원
+              </span>
+            </div>
+            <div className="text-xs text-slate-300">
+              * 아래 카탈로그에서 가전을 클릭하시면 1차·2차 가전으로 자동 선택/변경됩니다.
+            </div>
+          </div>
+
+          {/* 2 Selected Slots Display */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+            {/* Slot 1 */}
+            <div className={`p-3.5 rounded-xl border flex items-center justify-between gap-3 transition-colors ${
+              product1
+                ? 'bg-slate-800/90 border-rose-500/70 shadow-sm'
+                : 'bg-slate-800/40 border-dashed border-slate-700'
+            }`}>
+              {product1 ? (
+                <>
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="w-12 h-12 rounded-lg bg-white overflow-hidden shrink-0 p-1 flex items-center justify-center border border-slate-200">
+                      <img
+                        src={product1.image}
+                        alt={product1.name}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-1.5 mb-0.5">
+                        <span className="text-[10px] font-bold bg-rose-600 text-white px-1.5 py-0.2 rounded">
+                          가전 ① (1순위)
+                        </span>
+                        <span className="text-[10px] text-slate-400 font-mono">{product1.brandName}</span>
+                      </div>
+                      <div className="font-bold text-xs sm:text-sm text-white truncate">
+                        {product1.name}
+                      </div>
+                      <div className="text-[11px] text-rose-300 font-medium">
+                        본인부담금 0원 · {product1.modelCode}
+                      </div>
+                    </div>
+                  </div>
+                  {onRemoveProduct && (
+                    <button
+                      type="button"
+                      onClick={() => onRemoveProduct(0)}
+                      title="선택 해제"
+                      className="p-1.5 text-slate-400 hover:text-rose-400 hover:bg-slate-700/60 rounded-lg transition-colors cursor-pointer shrink-0"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  )}
+                </>
+              ) : (
+                <div className="flex items-center gap-3 py-1.5 text-slate-400 text-xs">
+                  <div className="w-12 h-12 rounded-lg border border-dashed border-slate-600 flex items-center justify-center text-slate-500">
+                    <Plus className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-300 text-xs">가전 ①을 선택해 주세요</div>
+                    <div className="text-[11px] text-slate-500">아래 목록에서 원하시는 가전 카드를 클릭하세요</div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Slot 2 */}
+            <div className={`p-3.5 rounded-xl border flex items-center justify-between gap-3 transition-colors ${
+              product2
+                ? 'bg-slate-800/90 border-amber-500/70 shadow-sm'
+                : 'bg-slate-800/40 border-dashed border-slate-700'
+            }`}>
+              {product2 ? (
+                <>
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="w-12 h-12 rounded-lg bg-white overflow-hidden shrink-0 p-1 flex items-center justify-center border border-slate-200">
+                      <img
+                        src={product2.image}
+                        alt={product2.name}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-1.5 mb-0.5">
+                        <span className="text-[10px] font-bold bg-amber-500 text-slate-950 px-1.5 py-0.2 rounded font-extrabold">
+                          가전 ② (2순위)
+                        </span>
+                        <span className="text-[10px] text-slate-400 font-mono">{product2.brandName}</span>
+                      </div>
+                      <div className="font-bold text-xs sm:text-sm text-white truncate">
+                        {product2.name}
+                      </div>
+                      <div className="text-[11px] text-amber-300 font-medium">
+                        본인부담금 0원 · {product2.modelCode}
+                      </div>
+                    </div>
+                  </div>
+                  {onRemoveProduct && (
+                    <button
+                      type="button"
+                      onClick={() => onRemoveProduct(1)}
+                      title="선택 해제"
+                      className="p-1.5 text-slate-400 hover:text-amber-400 hover:bg-slate-700/60 rounded-lg transition-colors cursor-pointer shrink-0"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  )}
+                </>
+              ) : (
+                <div className="flex items-center gap-3 py-1.5 text-slate-400 text-xs">
+                  <div className="w-12 h-12 rounded-lg border border-dashed border-slate-600 flex items-center justify-center text-slate-500">
+                    <Plus className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-300 text-xs">가전 ②를 추가 선택해 주세요</div>
+                    <div className="text-[11px] text-slate-500">2번째 가전까지 모두 100% 전액 지원됩니다</div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Go to Form CTA Bar */}
+          <div className="mt-4 pt-3 border-t border-slate-700/70 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="text-xs text-slate-300 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>가전 2종 패키지 구성 완료: 시중 출고가 대비 약 500만원 상당 전액지원</span>
+            </div>
+            <button
+              type="button"
+              onClick={onGoToForm}
+              className="w-full sm:w-auto px-5 py-2.5 bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>선택한 가전 2종으로 무료 상담 신청하기</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
         {/* Filter Toolbar: Tier, Brand, Category, Search */}
@@ -241,14 +399,18 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {displayedProducts.map((p) => {
-              const isSelected = selectedProductId === p.id;
+              const isSlot1 = product1?.id === p.id;
+              const isSlot2 = product2?.id === p.id;
+              const isSelected = isSlot1 || isSlot2;
 
               return (
                 <div
                   key={p.id}
                   className={`group bg-white rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden ${
-                    isSelected
-                      ? 'border-rose-500 ring-2 ring-rose-500/20 shadow-md'
+                    isSlot1
+                      ? 'border-rose-500 ring-2 ring-rose-500/25 shadow-md bg-rose-50/10'
+                      : isSlot2
+                      ? 'border-amber-500 ring-2 ring-amber-500/25 shadow-md bg-amber-50/10'
                       : 'border-slate-200 hover:border-slate-300 hover:shadow-lg'
                   }`}
                 >
@@ -283,11 +445,25 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                         </span>
                       </div>
 
-                      {/* Support 100% Badge */}
-                      <div className="absolute top-2.5 right-2.5">
-                        <span className="text-[11px] font-extrabold px-2 py-0.5 rounded bg-rose-600 text-white shadow-xs">
-                          100% 지원
-                        </span>
+                      {/* Selection Status Badge */}
+                      <div className="absolute top-2.5 right-2.5 flex items-center gap-1">
+                        {isSlot1 && (
+                          <span className="text-[11px] font-extrabold px-2 py-0.5 rounded bg-rose-600 text-white shadow-xs flex items-center gap-1">
+                            <Check className="w-3 h-3 stroke-[3]" />
+                            가전 ① 선택됨
+                          </span>
+                        )}
+                        {isSlot2 && (
+                          <span className="text-[11px] font-extrabold px-2 py-0.5 rounded bg-amber-500 text-slate-950 shadow-xs flex items-center gap-1">
+                            <Check className="w-3 h-3 stroke-[3]" />
+                            가전 ② 선택됨
+                          </span>
+                        )}
+                        {!isSelected && (
+                          <span className="text-[11px] font-extrabold px-2 py-0.5 rounded bg-slate-900/80 text-white shadow-xs">
+                            100% 지원
+                          </span>
+                        )}
                       </div>
                     </div>
 
@@ -332,20 +508,49 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                     </div>
                   </div>
 
-                  {/* Card Action */}
-                  <div className="p-4 pt-0">
-                    <button
-                      type="button"
-                      onClick={() => onSelectProduct(p)}
-                      className={`w-full py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer transition-all ${
-                        isSelected
-                          ? 'bg-rose-600 text-white shadow-sm'
-                          : 'bg-slate-900 hover:bg-rose-600 text-white'
-                      }`}
-                    >
-                      <span>{isSelected ? '선택됨 · 신청서 작성' : '이 가전으로 신청'}</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
+                  {/* Card Action: Slot 1 or Slot 2 Selection */}
+                  <div className="p-4 pt-0 space-y-1.5">
+                    {isSelected ? (
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => onToggleProduct(p)}
+                          className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer transition-all ${
+                            isSlot1
+                              ? 'bg-rose-600 text-white shadow-sm hover:bg-rose-700'
+                              : 'bg-amber-500 text-slate-950 shadow-sm hover:bg-amber-600'
+                          }`}
+                        >
+                          <span>{isSlot1 ? '가전 ① 선택 해제' : '가전 ② 선택 해제'}</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={onGoToForm}
+                          title="신청서로 바로 이동"
+                          className="py-2.5 px-3 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl flex items-center justify-center cursor-pointer transition-colors"
+                        >
+                          <span>신청</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-2 gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => onToggleProduct(p, 0)}
+                          className="py-2 px-2 bg-slate-900 hover:bg-rose-600 text-white rounded-xl text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer transition-colors"
+                        >
+                          <span>가전 ①로 담기</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => onToggleProduct(p, 1)}
+                          className="py-2 px-2 bg-slate-100 hover:bg-amber-500 hover:text-slate-950 text-slate-700 rounded-xl text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer transition-colors"
+                        >
+                          <span>가전 ②로 담기</span>
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -380,21 +585,18 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
             <ShieldCheck className="w-6 h-6 text-emerald-600 shrink-0" />
             <div>
               <div className="font-bold text-slate-900">
-                더리본 공식 홈페이지(the-reborn.co.kr) 전 가전 200종 100% 전액 지원
+                더리본 공식 가전 200종 중 원하는 2종 100% 전액 지원
               </div>
               <div className="text-slate-500 text-xs mt-0.5">
-                트리플 다이아몬드, 트리플 골드, 트리플 실버, 더블, 싱글 전 라인업 공식 제휴 본사 직배송 & 무상 설치
+                트리플 다이아몬드, 트리플 골드, 더블, 싱글 전 라인업 본사 직배송 & 전문 기사 무상 설치
               </div>
             </div>
           </div>
           <button
-            onClick={() => {
-              const form = document.getElementById('apply-form');
-              form?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={onGoToForm}
             className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl cursor-pointer transition-colors shrink-0"
           >
-            기타 가전 1:1 맞춤 문의
+            가전 2종 상담 신청하기
           </button>
         </div>
       </div>

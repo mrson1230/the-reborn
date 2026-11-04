@@ -56,10 +56,10 @@ export const Footer: React.FC<FooterProps> = ({
             <button
               onClick={onOpenAdmin}
               className="text-slate-400 hover:text-rose-400 cursor-pointer inline-flex items-center gap-1"
-              title="관리자 인증 필요 (비밀번호: 3927)"
+              title="관리자 보안인증 필요"
             >
               <Lock className="w-3 h-3 text-rose-500" />
-              <span>접수 관리자 (3927)</span>
+              <span>접수 관리자</span>
             </button>
           </div>
         </div>

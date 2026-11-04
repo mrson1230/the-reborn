@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { ShieldCheck, PhoneCall, Check, Lock, ChevronDown, Sparkles, AlertCircle, Sun, Moon, Clock, Zap } from 'lucide-react';
+import { ShieldCheck, PhoneCall, Check, Lock, ChevronDown, Sparkles, AlertCircle, Sun, Moon, Clock, Zap, Plus, RefreshCw, CheckCircle2 } from 'lucide-react';
 import { Product, ApplicationSubmission } from '../types';
 import { PRODUCTS_DATA } from '../data/products';
 import confetti from 'canvas-confetti';
 
 interface ApplicationFormSectionProps {
-  selectedProduct: Product;
-  onSelectProduct: (product: Product) => void;
+  selectedProducts: Product[];
+  onSelectProduct: (product: Product, slotIndex: 0 | 1) => void;
   onSubmitSuccess: (submission: ApplicationSubmission) => void;
   onOpenTerms: () => void;
+  onGoToLineup?: () => void;
 }
 
 export const CONSULTATION_TIME_SLOTS = [
@@ -51,10 +52,11 @@ export const CONSULTATION_TIME_SLOTS = [
 ];
 
 export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
-  selectedProduct,
+  selectedProducts,
   onSelectProduct,
   onSubmitSuccess,
   onOpenTerms,
+  onGoToLineup,
 }) => {
   const [userName, setUserName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -64,11 +66,14 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
   const [agreePrivacy, setAgreePrivacy] = useState(true);
   const [agreeMarketing, setAgreeMarketing] = useState(true);
 
-  const [errors, setErrors] = useState<{ name?: string; phone?: string; agree?: string }>({});
+  const [errors, setErrors] = useState<{ name?: string; phone?: string; agree?: string; products?: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
   const [connectingProgress, setConnectingProgress] = useState(15);
   const [connectingStep, setConnectingStep] = useState('상담 신청 정보를 안전하게 확인 중입니다...');
+
+  const product1 = selectedProducts[0] || PRODUCTS_DATA[0];
+  const product2 = selectedProducts[1] || PRODUCTS_DATA[1];
 
   // Phone number auto-formatter: 010-XXXX-XXXX
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -95,7 +100,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const newErrors: { name?: string; phone?: string; agree?: string } = {};
+    const newErrors: { name?: string; phone?: string; agree?: string; products?: string } = {};
 
     if (!userName.trim()) {
       newErrors.name = '성함을 입력해 주세요.';
@@ -114,6 +119,10 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
       newErrors.agree = '개인정보 수집 및 이용에 동의해 주세요.';
     }
 
+    if (!product1 || !product2) {
+      newErrors.products = '가전제품 2종을 모두 선택해 주세요.';
+    }
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
@@ -129,20 +138,25 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
     const randomCode = Math.floor(1000 + Math.random() * 9000);
     const appNumber = `TR-${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}-${randomCode}`;
 
-    // Detailed Formspree payload with both English & Korean keys for clear dashboard and email readings
+    // Detailed Formspree payload with both selected appliances
     const formspreePayload = {
-      _subject: `[더리본 가전 전액지원 상담신청] ${userName.trim()} (${phoneNumber}) - ${selectedProduct.name}`,
+      _subject: `[더리본 가전 2종 전액지원 상담신청] ${userName.trim()} (${phoneNumber}) - ① ${product1.name} + ② ${product2.name}`,
       applicationNumber: appNumber,
       customerName: userName.trim(),
       phoneNumber: phoneNumber,
       preferredTime: preferredTime,
       region: region,
-      productName: selectedProduct.name,
-      productBrand: selectedProduct.brandName,
-      modelCode: selectedProduct.modelCode,
-      tierName: selectedProduct.tierName,
-      customerCost: '0원 (100% 전액지원)',
-      monthlySupport: selectedProduct.monthlySupport,
+      // Product 1
+      product1Name: product1.name,
+      product1Brand: product1.brandName,
+      product1Model: product1.modelCode,
+      product1Tier: product1.tierName,
+      // Product 2
+      product2Name: product2.name,
+      product2Brand: product2.brandName,
+      product2Model: product2.modelCode,
+      product2Tier: product2.tierName,
+      customerCost: '0원 (가전 2종 모두 100% 전액지원)',
       note: note.trim() || '없음',
       agreePrivacy: agreePrivacy ? '동의함' : '미동의',
       agreeMarketing: agreeMarketing ? '동의함' : '미동의',
@@ -153,10 +167,9 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
       휴대폰번호: phoneNumber,
       희망상담시간대: preferredTime,
       설치희망지역: region,
-      선택가전: `[${selectedProduct.brandName}] ${selectedProduct.name} (${selectedProduct.modelCode})`,
-      지원구좌: selectedProduct.tierName,
-      본인부담금: '0원 (전액지원)',
-      월지원혜택: selectedProduct.monthlySupport,
+      선택가전1_순위: `[${product1.brandName}] ${product1.name} (${product1.modelCode} / ${product1.tierName})`,
+      선택가전2_순위: `[${product2.brandName}] ${product2.name} (${product2.modelCode} / ${product2.tierName})`,
+      가전2종_지원혜택: '가전 2개 품목 모두 본인부담금 0원 (100% 전액지원)',
       문의및요청사항: note.trim() || '없음',
       개인정보수집동의: '동의함',
       마케팅안내동의: agreeMarketing ? '동의함' : '미동의',
@@ -196,7 +209,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
 
       // Step 3: Counselor matching stage
       setConnectingProgress(85);
-      setConnectingStep('더리본 가전 전액지원 전담 상담사 매칭 중...');
+      setConnectingStep('더리본 가전 2종 전액지원 전담 상담사 매칭 중...');
       await new Promise((resolve) => setTimeout(resolve, 550));
 
       // Step 4: Finished stage
@@ -214,9 +227,16 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
       id: `app-${Date.now()}`,
       applicationNumber: appNumber,
       createdAt: dateString,
-      productName: selectedProduct.name,
-      productBrand: selectedProduct.brandName,
-      productImage: selectedProduct.image,
+      productName: product1.name,
+      productBrand: product1.brandName,
+      productImage: product1.image,
+      productModelCode: product1.modelCode,
+      productTierName: product1.tierName,
+      product2Name: product2.name,
+      product2Brand: product2.brandName,
+      product2Image: product2.image,
+      product2ModelCode: product2.modelCode,
+      product2TierName: product2.tierName,
       userName: userName.trim(),
       phoneNumber,
       preferredTime,
@@ -255,71 +275,162 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100/70 text-rose-700 text-xs font-bold mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>선착순 100% 전액 지원 간편 신청</span>
+            <span>선착순 가전 2종 100% 전액 지원 간편 신청</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight text-balance">
-            가전제품 전액지원 무료 상담 예약
+            가전제품 2종 전액지원 무료 상담 예약
           </h2>
           <p className="mt-2 text-slate-600 text-sm">
-            신청서를 남겨주시면 전문 상담원이 30분 이내 순차적으로 안심 전화를 드립니다.
+            원하시는 가전 2종을 확인하시고 신청서를 남겨주시면 전담 상담원이 30분 이내 순차적으로 안심 전화를 드립니다.
           </p>
         </div>
 
         {/* The Card Form Container */}
         <div className="bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
-          {/* Top Selected Product Bar */}
-          <div className="p-4 sm:p-5 bg-slate-900 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-lg bg-slate-800 overflow-hidden shrink-0 border border-slate-700 p-1 flex items-center justify-center">
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
-                  }}
-                  className="w-full h-full object-contain"
-                />
+          {/* Top 2 Selected Products Container */}
+          <div className="p-4 sm:p-5 bg-slate-900 text-white space-y-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" />
+                <span className="font-extrabold text-sm sm:text-base text-white">
+                  선택된 지원 가전 (총 2종 100% 전액지원)
+                </span>
               </div>
-              <div>
-                <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-amber-500 text-white">
-                    {selectedProduct.tierName}
-                  </span>
-                  <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-rose-600 text-white">
-                    {selectedProduct.brandName}
-                  </span>
-                  <span className="text-xs text-slate-300 font-mono">{selectedProduct.modelCode}</span>
+              {onGoToLineup && (
+                <button
+                  type="button"
+                  onClick={onGoToLineup}
+                  className="text-xs text-rose-400 hover:text-rose-300 underline font-medium cursor-pointer"
+                >
+                  가전 카탈로그에서 다시 고르기
+                </button>
+              )}
+            </div>
+
+            {/* Dual Product Slots Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+              {/* Product Slot 1 */}
+              <div className="bg-slate-800/95 border border-rose-500/80 rounded-xl p-3 flex flex-col justify-between gap-2.5">
+                <div className="flex items-start gap-3">
+                  <div className="w-14 h-14 rounded-lg bg-white overflow-hidden shrink-0 border border-slate-700 p-1 flex items-center justify-center">
+                    <img
+                      src={product1.image}
+                      alt={product1.name}
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
+                      }}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-rose-600 text-white">
+                        가전 ① (1순위)
+                      </span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-amber-500 text-white">
+                        {product1.tierName}
+                      </span>
+                      <span className="text-[10px] text-slate-300 font-mono truncate">{product1.brandName}</span>
+                    </div>
+                    <div className="font-bold text-xs sm:text-sm text-white line-clamp-1">
+                      {product1.name}
+                    </div>
+                    <div className="text-[11px] text-rose-300 font-semibold mt-0.5">
+                      본인부담금 0원 · {product1.modelCode}
+                    </div>
+                  </div>
                 </div>
-                <div className="font-bold text-sm sm:text-base text-white mt-0.5 line-clamp-1">
-                  {selectedProduct.name}
+
+                {/* Slot 1 Switcher Dropdown */}
+                <div className="pt-2 border-t border-slate-700/70">
+                  <label htmlFor="product1-switcher" className="sr-only">
+                    가전 1 변경
+                  </label>
+                  <select
+                    id="product1-switcher"
+                    value={product1.id}
+                    onChange={(e) => {
+                      const target = PRODUCTS_DATA.find((p) => p.id === e.target.value);
+                      if (target) onSelectProduct(target, 0);
+                    }}
+                    className="w-full bg-slate-900 text-white text-[11px] font-medium border border-slate-700 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-rose-500 cursor-pointer"
+                  >
+                    {PRODUCTS_DATA.map((p) => (
+                      <option key={`p1-${p.id}`} value={p.id}>
+                        [가전1] [{p.brandName}] {p.name}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-                <div className="text-xs text-rose-400 font-semibold mt-0.5">
-                  지원 혜택: 본인부담금 0원 (전액지원)
+              </div>
+
+              {/* Product Slot 2 */}
+              <div className="bg-slate-800/95 border border-amber-500/80 rounded-xl p-3 flex flex-col justify-between gap-2.5">
+                <div className="flex items-start gap-3">
+                  <div className="w-14 h-14 rounded-lg bg-white overflow-hidden shrink-0 border border-slate-700 p-1 flex items-center justify-center">
+                    <img
+                      src={product2.image}
+                      alt={product2.name}
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
+                      }}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-amber-500 text-slate-950 font-extrabold">
+                        가전 ② (2순위)
+                      </span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-slate-700 text-white">
+                        {product2.tierName}
+                      </span>
+                      <span className="text-[10px] text-slate-300 font-mono truncate">{product2.brandName}</span>
+                    </div>
+                    <div className="font-bold text-xs sm:text-sm text-white line-clamp-1">
+                      {product2.name}
+                    </div>
+                    <div className="text-[11px] text-amber-300 font-semibold mt-0.5">
+                      본인부담금 0원 · {product2.modelCode}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Slot 2 Switcher Dropdown */}
+                <div className="pt-2 border-t border-slate-700/70">
+                  <label htmlFor="product2-switcher" className="sr-only">
+                    가전 2 변경
+                  </label>
+                  <select
+                    id="product2-switcher"
+                    value={product2.id}
+                    onChange={(e) => {
+                      const target = PRODUCTS_DATA.find((p) => p.id === e.target.value);
+                      if (target) onSelectProduct(target, 1);
+                    }}
+                    className="w-full bg-slate-900 text-white text-[11px] font-medium border border-slate-700 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-amber-500 cursor-pointer"
+                  >
+                    {PRODUCTS_DATA.map((p) => (
+                      <option key={`p2-${p.id}`} value={p.id}>
+                        [가전2] [{p.brandName}] {p.name}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
             </div>
 
-            {/* Quick Switch Dropdown */}
-            <div className="w-full sm:w-auto shrink-0">
-              <label htmlFor="product-switcher" className="sr-only">
-                가전 변경
-              </label>
-              <select
-                id="product-switcher"
-                value={selectedProduct.id}
-                onChange={(e) => {
-                  const target = PRODUCTS_DATA.find((p) => p.id === e.target.value);
-                  if (target) onSelectProduct(target);
-                }}
-                className="w-full sm:w-auto bg-slate-800 text-white text-xs font-medium border border-slate-700 rounded-lg px-3 py-2 focus:outline-none focus:border-rose-500 cursor-pointer"
-              >
-                {PRODUCTS_DATA.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    [{p.tierName}] {p.name} ({p.modelCode})
-                  </option>
-                ))}
-              </select>
+            {/* Combined Benefit Tag */}
+            <div className="pt-1 flex items-center justify-between text-xs text-rose-300">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>가전 2개 품목 모두 제조사 정품 본사 무료 배송 & 전문 기사 무상 설치 지원</span>
+              </span>
+              <span className="font-extrabold text-white bg-rose-600 px-2 py-0.5 rounded text-[11px]">
+                본인부담금 총 0원
+              </span>
             </div>
           </div>
 
@@ -481,14 +592,14 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
               </div>
             </div>
 
-            {/* Row 3: Additional Note */}
+            {/* Row 4: Additional Note */}
             <div>
               <label className="block text-xs font-bold text-slate-800 mb-1.5">
-                문의사항 또는 추가 희망가전 <span className="text-slate-400 font-normal">(선택사항)</span>
+                문의사항 또는 추가 희망내용 <span className="text-slate-400 font-normal">(선택사항)</span>
               </label>
               <input
                 type="text"
-                placeholder="예: 이사 예정 / 라이프서비스(크루즈·웨딩·장례 등) 동시 문의 / 폐가전 무료 수거"
+                placeholder="예: 가전 2종 외 라이프서비스(크루즈·웨딩·장례 등) 동시 문의 / 기존 구형 가전 무료 수거"
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm text-slate-900 bg-slate-50/50 focus:bg-white focus:border-rose-600 focus:outline-none transition-colors"
@@ -504,8 +615,8 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
                 className="w-12 h-12 rounded-full object-cover border border-slate-300 shrink-0"
               />
               <div className="text-xs text-slate-600">
-                <span className="font-bold text-slate-900">더리본 전문 해피콜 안심 보증:</span>{' '}
-                고객님의 소중한 개인정보는 1:1 전액지원 가전 심사 및 상담 예약 목적으로만 안전하게 암호화 관리됩니다.
+                <span className="font-bold text-slate-900">더리본 가전 2종 전액지원 안심 보증:</span>{' '}
+                고객님의 소중한 개인정보는 1:1 전액지원 가전 심사 및 상담 예약 목적으로만 안전하게 256비트 암호화 관리됩니다.
               </div>
             </div>
 
@@ -541,7 +652,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
                     className="w-4 h-4 rounded text-rose-600 focus:ring-rose-500 border-slate-300"
                   />
                   <span>
-                    <strong className="text-slate-500">[선택]</strong> 가전 프로모션 혜택 및 이벤트 안내 수신 동의
+                    <strong className="text-slate-500">[선택]</strong> 가전 2종 프로모션 혜택 및 이벤트 안내 수신 동의
                   </span>
                 </label>
               </div>
@@ -584,7 +695,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
                 ) : (
                   <>
                     <PhoneCall className="w-5 h-5" />
-                    <span>가전제품 100% 전액지원 무료 상담 신청하기</span>
+                    <span>가전 2종 100% 전액지원 무료 상담 신청하기</span>
                   </>
                 )}
               </button>
@@ -662,31 +773,49 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
               </div>
             </div>
 
-            {/* Selected Appliance Mini Summary */}
-            <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-left flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 overflow-hidden shrink-0 p-0.5 flex items-center justify-center">
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain"
-                />
+            {/* Selected Dual Appliances Mini Summary */}
+            <div className="space-y-2 text-left">
+              <div className="p-2.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 overflow-hidden shrink-0 p-0.5 flex items-center justify-center">
+                  <img
+                    src={product1.image}
+                    alt={product1.name}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-[10px] font-bold text-rose-600">
+                    가전 ① [{product1.brandName}] 본인부담금 0원 지원
+                  </div>
+                  <div className="text-xs font-bold text-slate-900 truncate">
+                    {product1.name}
+                  </div>
+                </div>
               </div>
-              <div className="min-w-0 flex-1">
-                <div className="text-[10px] font-bold text-rose-600">
-                  [{selectedProduct.brandName}] 본인부담금 0원 지원
+
+              <div className="p-2.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 overflow-hidden shrink-0 p-0.5 flex items-center justify-center">
+                  <img
+                    src={product2.image}
+                    alt={product2.name}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <div className="text-xs font-bold text-slate-900 truncate">
-                  {selectedProduct.name}
-                </div>
-                <div className="text-[10px] text-slate-400">
-                  신청자: {userName} · {phoneNumber}
+                <div className="min-w-0 flex-1">
+                  <div className="text-[10px] font-bold text-amber-600">
+                    가전 ② [{product2.brandName}] 본인부담금 0원 지원
+                  </div>
+                  <div className="text-xs font-bold text-slate-900 truncate">
+                    {product2.name}
+                  </div>
                 </div>
               </div>
             </div>
 
             <p className="text-[11px] text-slate-400">
-              * 기재해주신 번호로 담당 상담사가 순차적으로 안심 해피콜을 드립니다.
+              * 기재해주신 번호({phoneNumber || '입력하신 번호'})로 담당 상담사가 순차적으로 안심 해피콜을 드립니다.
             </p>
           </div>
         </div>

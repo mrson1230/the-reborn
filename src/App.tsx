@@ -26,7 +26,12 @@ import { Product, ApplicationSubmission, TickerItem } from './types';
 const STORAGE_KEY = 'theribbon_submissions_v1';
 
 export default function App() {
-  const [selectedProduct, setSelectedProduct] = useState<Product>(PRODUCTS_DATA[0]);
+  // Dual selected appliances: Default 2 flagship appliances
+  const [selectedProducts, setSelectedProducts] = useState<Product[]>([
+    PRODUCTS_DATA[0],
+    PRODUCTS_DATA[1],
+  ]);
+
   const [submissions, setSubmissions] = useState<ApplicationSubmission[]>(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
@@ -109,13 +114,48 @@ export default function App() {
     }
   }, [submissions]);
 
-  // Product selection handler
-  const handleSelectProduct = (product: Product) => {
-    setSelectedProduct(product);
-    const formElement = document.getElementById('apply-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
-    }
+  // Dual Product Selection Handlers
+  const handleToggleProduct = (product: Product, targetSlot?: 0 | 1) => {
+    setSelectedProducts((prev) => {
+      if (targetSlot === 0) {
+        return [product, prev[1] || PRODUCTS_DATA[1]];
+      }
+      if (targetSlot === 1) {
+        return [prev[0] || PRODUCTS_DATA[0], product];
+      }
+      // Click toggle:
+      if (prev[0]?.id === product.id) {
+        // Toggle off slot 0 with another alternative
+        const alternative = PRODUCTS_DATA.find((p) => p.id !== prev[1]?.id && p.id !== product.id) || PRODUCTS_DATA[0];
+        return [alternative, prev[1]];
+      }
+      if (prev[1]?.id === product.id) {
+        // Toggle off slot 1 with another alternative
+        const alternative = PRODUCTS_DATA.find((p) => p.id !== prev[0]?.id && p.id !== product.id) || PRODUCTS_DATA[1];
+        return [prev[0], alternative];
+      }
+      // If none matched, replace slot 1
+      return [prev[0], product];
+    });
+  };
+
+  const handleSelectProductSlot = (product: Product, slotIndex: 0 | 1) => {
+    setSelectedProducts((prev) => {
+      const copy = [...prev];
+      copy[slotIndex] = product;
+      return copy;
+    });
+  };
+
+  const handleRemoveProduct = (slotIndex: 0 | 1) => {
+    setSelectedProducts((prev) => {
+      const otherSlot = slotIndex === 0 ? 1 : 0;
+      const otherId = prev[otherSlot]?.id;
+      const alternative = PRODUCTS_DATA.find((p) => p.id !== otherId && p.id !== prev[slotIndex]?.id) || PRODUCTS_DATA[slotIndex];
+      const copy = [...prev];
+      copy[slotIndex] = alternative;
+      return copy;
+    });
   };
 
   const handleApplyShortcut = () => {
@@ -136,11 +176,15 @@ export default function App() {
     setSubmissions((prev) => [newSubmission, ...prev]);
 
     // Also inject new applicant into live rolling ticker for real-time gratification
+    const productSummary = newSubmission.product2Name
+      ? `${newSubmission.productName} + ${newSubmission.product2Name}`
+      : newSubmission.productName;
+
     const newTicker: TickerItem = {
       id: `tick-${Date.now()}`,
       name: `${newSubmission.userName.charAt(0)}*${newSubmission.userName.slice(2) || '님'}`,
       region: newSubmission.region,
-      product: newSubmission.productName,
+      product: productSummary,
       timeAgo: '방금 전',
       status: '접수완료',
     };
@@ -187,26 +231,26 @@ export default function App() {
 
         {/* Life Services (Cruise, Wedding, Funeral, Language study) */}
         <LifeServiceSection
-          onSelectServiceInquiry={(serviceName) => {
-            const formElem = document.getElementById('application-form');
-            if (formElem) {
-              formElem.scrollIntoView({ behavior: 'smooth' });
-            }
+          onSelectServiceInquiry={() => {
+            handleApplyShortcut();
           }}
         />
 
-        {/* Product Lineup Catalog with Samsung/LG filters & search */}
+        {/* Product Lineup Catalog with Dual Selection and filters */}
         <ProductLineupSection
-          onSelectProduct={handleSelectProduct}
-          selectedProductId={selectedProduct.id}
+          selectedProducts={selectedProducts}
+          onToggleProduct={handleToggleProduct}
+          onRemoveProduct={handleRemoveProduct}
+          onGoToForm={handleApplyShortcut}
         />
 
-        {/* High-converting intuitive application form */}
+        {/* High-converting intuitive application form for 2 appliances */}
         <ApplicationFormSection
-          selectedProduct={selectedProduct}
-          onSelectProduct={setSelectedProduct}
+          selectedProducts={selectedProducts}
+          onSelectProduct={handleSelectProductSlot}
           onSubmitSuccess={handleSubmitSuccess}
           onOpenTerms={() => setIsTermsOpen(true)}
+          onGoToLineup={handleSelectProductShortcut}
         />
 
         {/* Customer Reviews & Real Social Proof */}
@@ -223,9 +267,9 @@ export default function App() {
         onOpenAdmin={handleOpenAdmin}
       />
 
-      {/* Mobile Sticky Bar (strictly capped under 15% viewport height) */}
+      {/* Mobile Sticky Bar (displays both appliances and quick apply) */}
       <MobileStickyBar
-        selectedProduct={selectedProduct}
+        selectedProducts={selectedProducts}
         onApplyClick={handleApplyShortcut}
       />
 

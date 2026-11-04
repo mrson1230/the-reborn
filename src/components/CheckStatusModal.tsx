@@ -64,7 +64,7 @@ export const CheckStatusModal: React.FC<CheckStatusModalProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-300 mt-0.5">
-              관리자 인증(3927) 완료 · 등록하신 휴대폰 번호로 접수 상태를 확인하세요.
+              관리자 보안인증 완료 · 등록하신 휴대폰 번호로 가전 2종 접수 상태를 확인하세요.
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -146,26 +146,57 @@ export const CheckStatusModal: React.FC<CheckStatusModalProps> = ({
                   </span>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200 p-0.5 flex items-center justify-center">
-                    <img
-                      src={item.productImage}
-                      alt={item.productName}
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
-                      }}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div>
-                    <div className="text-[11px] font-bold text-rose-600">
-                      [{item.productBrand}] 100% 전액지원 신청
+                {/* Dual Appliances Details */}
+                <div className="space-y-2">
+                  {/* Product 1 */}
+                  <div className="flex items-center gap-3 p-2 bg-slate-50 rounded-lg border border-slate-100">
+                    <div className="w-10 h-10 rounded-lg bg-white overflow-hidden shrink-0 border border-slate-200 p-0.5 flex items-center justify-center">
+                      <img
+                        src={item.productImage}
+                        alt={item.productName}
+                        referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
+                        }}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
-                    <div className="font-bold text-sm text-slate-900 line-clamp-1">
-                      {item.productName}
+                    <div className="min-w-0 flex-1">
+                      <div className="text-[10px] font-bold text-rose-600 flex items-center gap-1">
+                        <span>가전 ①</span>
+                        <span>[{item.productBrand}] 100% 전액지원</span>
+                      </div>
+                      <div className="font-bold text-xs text-slate-900 truncate">
+                        {item.productName}
+                      </div>
                     </div>
                   </div>
+
+                  {/* Product 2 */}
+                  {item.product2Name && (
+                    <div className="flex items-center gap-3 p-2 bg-slate-50 rounded-lg border border-slate-100">
+                      <div className="w-10 h-10 rounded-lg bg-white overflow-hidden shrink-0 border border-slate-200 p-0.5 flex items-center justify-center">
+                        <img
+                          src={item.product2Image || item.productImage}
+                          alt={item.product2Name}
+                          referrerPolicy="no-referrer"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = '/src/assets/images/hero_home_appliances_living_1793774944397.jpg';
+                          }}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-[10px] font-bold text-amber-600 flex items-center gap-1">
+                          <span>가전 ②</span>
+                          <span>[{item.product2Brand}] 100% 전액지원</span>
+                        </div>
+                        <div className="font-bold text-xs text-slate-900 truncate">
+                          {item.product2Name}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-xs text-slate-600 pt-1 bg-slate-50 p-2.5 rounded-lg">
