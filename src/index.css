@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom pulse animations for live status indicators */
+@keyframes soft-glow {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.98); }
+}
+
+.animate-soft-glow {
+  animation: soft-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
