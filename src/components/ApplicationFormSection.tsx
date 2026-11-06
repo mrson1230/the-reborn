@@ -447,7 +447,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
                   placeholder="예: 홍길동"
                   value={userName}
                   onChange={handleNameChange}
-                  className={`w-full px-4 py-3 rounded-xl border text-sm text-slate-900 bg-slate-50/50 focus:bg-white focus:outline-none transition-colors ${
+                  className={`w-full px-4 py-3 rounded-xl border text-base sm:text-sm text-slate-900 bg-slate-50/50 focus:bg-white focus:outline-none transition-colors ${
                     errors.name ? 'border-rose-500 ring-1 ring-rose-500' : 'border-slate-300 focus:border-rose-600'
                   }`}
                 />
@@ -469,7 +469,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
                   maxLength={13}
                   value={phoneNumber}
                   onChange={handlePhoneChange}
-                  className={`w-full px-4 py-3 rounded-xl border text-sm text-slate-900 bg-slate-50/50 focus:bg-white focus:outline-none transition-colors ${
+                  className={`w-full px-4 py-3 rounded-xl border text-base sm:text-sm text-slate-900 bg-slate-50/50 focus:bg-white focus:outline-none transition-colors ${
                     errors.phone ? 'border-rose-500 ring-1 ring-rose-500' : 'border-slate-300 focus:border-rose-600'
                   }`}
                 />

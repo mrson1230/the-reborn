@@ -208,6 +208,13 @@ export default function App() {
     setTickerItems(INITIAL_TICKER);
   };
 
+  const handleGoToLifeService = () => {
+    const lifeServiceEl = document.getElementById('life-service');
+    if (lifeServiceEl) {
+      lifeServiceEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-rose-500 selection:text-white">
       {/* Navigation */}
@@ -217,8 +224,8 @@ export default function App() {
         applicationCount={submissions.length}
       />
 
-      {/* Main Content Sections */}
-      <main className="flex-1">
+      {/* Main Content Sections - pb-28 on mobile ensures sticky bottom bar never obscures content */}
+      <main className="flex-1 pb-28 md:pb-0">
         {/* Hero Section with urgency & live ticker & mini eligibility test */}
         <HeroSection
           onSelectProductShortcut={handleSelectProductShortcut}
@@ -267,10 +274,13 @@ export default function App() {
         onOpenAdmin={handleOpenAdmin}
       />
 
-      {/* Mobile Sticky Bar (displays both appliances and quick apply) */}
+      {/* Mobile Bottom Thumb Navigation & Quick Apply Bar */}
       <MobileStickyBar
         selectedProducts={selectedProducts}
         onApplyClick={handleApplyShortcut}
+        onGoToLineup={handleSelectProductShortcut}
+        onGoToLifeService={handleGoToLifeService}
+        onOpenCheckStatus={handleOpenCheckStatus}
       />
 
       {/* Check Status Modal (Lookup by phone number - Protected by 3927) */}

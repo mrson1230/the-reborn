@@ -376,7 +376,7 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
           </div>
         </div>
 
-        {/* Product Cards Grid */}
+        {/* Product Cards Grid - 2 columns on mobile for fast shopping app experience */}
         {filteredProducts.length === 0 ? (
           <div className="text-center py-16 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
             <p className="text-slate-700 font-bold text-base">선택하신 조건에 일치하는 가전이 없습니다.</p>
@@ -397,7 +397,7 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-5">
             {displayedProducts.map((p) => {
               const isSlot1 = product1?.id === p.id;
               const isSlot2 = product2?.id === p.id;
@@ -406,7 +406,7 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
               return (
                 <div
                   key={p.id}
-                  className={`group bg-white rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden ${
+                  className={`group bg-white rounded-xl sm:rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden ${
                     isSlot1
                       ? 'border-rose-500 ring-2 ring-rose-500/25 shadow-md bg-rose-50/10'
                       : isSlot2
@@ -416,7 +416,7 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                 >
                   {/* Card Media Preview */}
                   <div>
-                    <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden border-b border-slate-100 flex items-center justify-center p-3">
+                    <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden border-b border-slate-100 flex items-center justify-center p-2 sm:p-3">
                       <img
                         src={p.image}
                         alt={p.name}
@@ -428,9 +428,9 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                       />
 
                       {/* Brand Label & Tier Label */}
-                      <div className="absolute top-2.5 left-2.5 flex flex-wrap items-center gap-1">
+                      <div className="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 flex flex-wrap items-center gap-1">
                         <span
-                          className={`text-[10px] font-bold px-1.5 py-0.5 rounded shadow-xs ${
+                          className={`text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded shadow-xs ${
                             p.brand === 'samsung'
                               ? 'bg-blue-600 text-white'
                               : p.brand === 'lg'
@@ -440,49 +440,49 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                         >
                           {p.brandName}
                         </span>
-                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500 text-white shadow-xs">
+                        <span className="hidden xs:inline-block text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500 text-white shadow-xs">
                           {p.tierName}
                         </span>
                       </div>
 
                       {/* Selection Status Badge */}
-                      <div className="absolute top-2.5 right-2.5 flex items-center gap-1">
+                      <div className="absolute top-1.5 right-1.5 sm:top-2.5 sm:right-2.5 flex items-center gap-1">
                         {isSlot1 && (
-                          <span className="text-[11px] font-extrabold px-2 py-0.5 rounded bg-rose-600 text-white shadow-xs flex items-center gap-1">
-                            <Check className="w-3 h-3 stroke-[3]" />
-                            가전 ① 선택됨
+                          <span className="text-[9px] sm:text-[11px] font-extrabold px-1.5 sm:px-2 py-0.5 rounded bg-rose-600 text-white shadow-xs flex items-center gap-0.5">
+                            <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 stroke-[3]" />
+                            <span>① 선택됨</span>
                           </span>
                         )}
                         {isSlot2 && (
-                          <span className="text-[11px] font-extrabold px-2 py-0.5 rounded bg-amber-500 text-slate-950 shadow-xs flex items-center gap-1">
-                            <Check className="w-3 h-3 stroke-[3]" />
-                            가전 ② 선택됨
+                          <span className="text-[9px] sm:text-[11px] font-extrabold px-1.5 sm:px-2 py-0.5 rounded bg-amber-500 text-slate-950 shadow-xs flex items-center gap-0.5">
+                            <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 stroke-[3]" />
+                            <span>② 선택됨</span>
                           </span>
                         )}
                         {!isSelected && (
-                          <span className="text-[11px] font-extrabold px-2 py-0.5 rounded bg-slate-900/80 text-white shadow-xs">
-                            100% 지원
+                          <span className="text-[9px] sm:text-[11px] font-extrabold px-1.5 sm:px-2 py-0.5 rounded bg-slate-900/80 text-white shadow-xs">
+                            0원 지원
                           </span>
                         )}
                       </div>
                     </div>
 
                     {/* Card Content */}
-                    <div className="p-4">
-                      <div className="flex items-center justify-between text-[11px] text-slate-400 font-mono mb-1">
-                        <span className="truncate max-w-[150px]">{p.modelCode}</span>
+                    <div className="p-2.5 sm:p-4">
+                      <div className="flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400 font-mono mb-0.5 sm:mb-1">
+                        <span className="truncate max-w-[100px] sm:max-w-[150px]">{p.modelCode}</span>
                         {p.badge && (
-                          <span className="text-rose-600 font-sans font-bold text-[10px] bg-rose-50 px-1.5 py-0.2 rounded shrink-0">
+                          <span className="text-rose-600 font-sans font-bold text-[9px] sm:text-[10px] bg-rose-50 px-1 py-0.2 rounded shrink-0">
                             {p.badge}
                           </span>
                         )}
                       </div>
-                      <h3 className="text-sm font-bold text-slate-900 group-hover:text-rose-600 transition-colors line-clamp-2 leading-snug mb-2 min-h-[38px]">
+                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-rose-600 transition-colors line-clamp-2 leading-snug mb-1 sm:mb-2 min-h-[32px] sm:min-h-[38px]">
                         {p.name}
                       </h3>
 
-                      {/* Specs List */}
-                      <ul className="space-y-1 mb-3 text-[11px] text-slate-600">
+                      {/* Specs List (Desktop & Tablet) */}
+                      <ul className="hidden sm:block space-y-1 mb-3 text-[11px] text-slate-600">
                         {p.specs.slice(0, 3).map((spec, i) => (
                           <li key={i} className="flex items-center gap-1.5 truncate">
                             <Check className="w-3 h-3 text-rose-500 shrink-0" />
@@ -491,17 +491,22 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                         ))}
                       </ul>
 
+                      {/* Mobile 1-line Spec */}
+                      <div className="sm:hidden text-[10px] text-slate-500 truncate mb-1.5">
+                        {p.specs[0] || '공식 제조사 정품 미개봉'}
+                      </div>
+
                       {/* Pricing Comparison */}
-                      <div className="pt-2.5 border-t border-slate-100">
-                        <div className="flex items-center justify-between text-[11px] text-slate-400">
-                          <span>시중 출고가</span>
+                      <div className="pt-1.5 sm:pt-2.5 border-t border-slate-100">
+                        <div className="flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400">
+                          <span className="hidden sm:inline">시중 출고가</span>
                           <span className="line-through">{p.originalPrice}</span>
                         </div>
                         <div className="flex items-baseline justify-between mt-0.5">
-                          <span className="text-[11px] font-semibold text-rose-600">더리본 지원가</span>
+                          <span className="text-[10px] sm:text-[11px] font-semibold text-rose-600">지원 적용가</span>
                           <div className="text-right">
-                            <span className="text-lg font-extrabold text-rose-600 tabular-nums">0</span>
-                            <span className="text-xs font-bold text-rose-600 ml-0.5">원</span>
+                            <span className="text-base sm:text-lg font-extrabold text-rose-600 tabular-nums">0</span>
+                            <span className="text-[10px] sm:text-xs font-bold text-rose-600 ml-0.5">원</span>
                           </div>
                         </div>
                       </div>
@@ -509,45 +514,45 @@ export const ProductLineupSection: React.FC<ProductLineupSectionProps> = ({
                   </div>
 
                   {/* Card Action: Slot 1 or Slot 2 Selection */}
-                  <div className="p-4 pt-0 space-y-1.5">
+                  <div className="p-2.5 sm:p-4 pt-0 space-y-1.5">
                     {isSelected ? (
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-1 sm:gap-1.5">
                         <button
                           type="button"
                           onClick={() => onToggleProduct(p)}
-                          className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer transition-all ${
+                          className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-3 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold flex items-center justify-center gap-1 cursor-pointer transition-all ${
                             isSlot1
                               ? 'bg-rose-600 text-white shadow-sm hover:bg-rose-700'
                               : 'bg-amber-500 text-slate-950 shadow-sm hover:bg-amber-600'
                           }`}
                         >
-                          <span>{isSlot1 ? '가전 ① 선택 해제' : '가전 ② 선택 해제'}</span>
+                          <span>{isSlot1 ? '① 해제' : '② 해제'}</span>
                         </button>
                         <button
                           type="button"
                           onClick={onGoToForm}
                           title="신청서로 바로 이동"
-                          className="py-2.5 px-3 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl flex items-center justify-center cursor-pointer transition-colors"
+                          className="py-2 sm:py-2.5 px-2.5 sm:px-3 bg-slate-900 hover:bg-slate-800 text-white text-[10px] sm:text-xs font-bold rounded-lg sm:rounded-xl flex items-center justify-center cursor-pointer transition-colors"
                         >
                           <span>신청</span>
-                          <ArrowRight className="w-3.5 h-3.5" />
+                          <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         </button>
                       </div>
                     ) : (
-                      <div className="grid grid-cols-2 gap-1.5">
+                      <div className="grid grid-cols-2 gap-1 sm:gap-1.5">
                         <button
                           type="button"
                           onClick={() => onToggleProduct(p, 0)}
-                          className="py-2 px-2 bg-slate-900 hover:bg-rose-600 text-white rounded-xl text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer transition-colors"
+                          className="py-2 sm:py-2 px-1 sm:px-2 bg-slate-900 hover:bg-rose-600 text-white rounded-lg sm:rounded-xl text-[10px] sm:text-[11px] font-bold flex items-center justify-center gap-0.5 sm:gap-1 cursor-pointer transition-colors"
                         >
-                          <span>가전 ①로 담기</span>
+                          <span>① 담기</span>
                         </button>
                         <button
                           type="button"
                           onClick={() => onToggleProduct(p, 1)}
-                          className="py-2 px-2 bg-slate-100 hover:bg-amber-500 hover:text-slate-950 text-slate-700 rounded-xl text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer transition-colors"
+                          className="py-2 sm:py-2 px-1 sm:px-2 bg-slate-100 hover:bg-amber-500 hover:text-slate-950 text-slate-700 rounded-lg sm:rounded-xl text-[10px] sm:text-[11px] font-bold flex items-center justify-center gap-0.5 sm:gap-1 cursor-pointer transition-colors"
                         >
-                          <span>가전 ②로 담기</span>
+                          <span>② 담기</span>
                         </button>
                       </div>
                     )}

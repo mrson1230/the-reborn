@@ -59,21 +59,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     <section className="relative overflow-hidden bg-white border-b border-slate-200 pt-8 pb-14 lg:pt-14 lg:pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Urgency & Live Ticker Bar */}
-        <div className="mb-6 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm">
-          <div className="flex items-center gap-2 text-slate-800">
-            <span className="inline-flex items-center gap-1 font-semibold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-100 shrink-0">
+        <div className="mb-6 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5 sm:gap-3 p-2.5 sm:p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-slate-800">
+            <span className="inline-flex items-center gap-1 font-semibold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-100 shrink-0 text-[11px] sm:text-xs">
               <Flame className="w-3.5 h-3.5 text-rose-600 fill-rose-600" />
               선착순 마감임박
             </span>
-            <span className="font-medium text-slate-600">이달 배정 지원물량 100대 한정</span>
+            <span className="font-medium text-slate-600 text-[11px] sm:text-xs">이달 물량 100대 한정</span>
             <span className="text-slate-400">·</span>
-            <span className="font-mono font-bold text-slate-900 tabular-nums">
+            <span className="font-mono font-bold text-slate-900 tabular-nums text-[11px] sm:text-xs">
               잔여 14대 남음
             </span>
           </div>
 
           {/* Rolling Social Proof Ticket */}
-          <div className="flex items-center gap-2 overflow-hidden bg-white px-3 py-1.5 rounded-lg border border-slate-200 text-xs">
+          <div className="flex items-center gap-2 overflow-hidden bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 text-xs">
             <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
             <span className="font-semibold text-slate-900 shrink-0">실시간 접수:</span>
             <div className="truncate text-slate-600">
@@ -85,15 +85,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
 
         {/* Hero Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Headline and Call to Actions */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200/70 px-3 py-1 rounded-md">
-              <ShieldCheck className="w-4 h-4 text-rose-600" />
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+            <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200/70 px-2.5 py-1 rounded-md">
+              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-600 shrink-0" />
               <span>삼성전자 · LG전자 공식 제휴 100% 전액지원</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-950 leading-[1.2] text-balance">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-950 leading-[1.25] text-balance">
               최신 프리미엄 가전제품<br />
               <span className="text-rose-600 underline decoration-rose-300 decoration-wavy underline-offset-8">
                 본인부담금 0원
