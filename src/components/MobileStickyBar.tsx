@@ -104,11 +104,13 @@ export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({
         className="bg-slate-900/95 backdrop-blur-md text-white px-3 py-1.5 border-t border-slate-800 flex items-center justify-between cursor-pointer active:bg-slate-800 transition-colors"
       >
         <div className="flex items-center gap-2 min-w-0 flex-1">
-          <span className="text-[10px] font-extrabold bg-rose-600 text-white px-1.5 py-0.5 rounded shrink-0">
-            가전 2종 선택됨
+          <span className="text-[10px] font-extrabold bg-blue-600 text-white px-1.5 py-0.5 rounded shrink-0">
+            {selectedCount === 2 ? '가전 2종 선택됨' : selectedCount === 1 ? '가전 1/2 선택됨' : '가전 0/2 선택'}
           </span>
           <span className="text-[11px] text-slate-300 truncate font-medium">
-            {p1?.name ? `① ${p1.name}` : ''} {p2?.name ? `+ ② ${p2.name}` : ''}
+            {selectedCount === 0
+              ? '원하는 가전 2종을 선택해 주세요 (0원 지원)'
+              : `${p1 ? `① ${p1.name}` : ''} ${p2 ? `+ ② ${p2.name}` : ''}`}
           </span>
         </div>
         <div className="flex items-center gap-1 text-[10px] text-slate-400 shrink-0 ml-1">

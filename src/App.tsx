@@ -26,11 +26,8 @@ import { Product, ApplicationSubmission, TickerItem } from './types';
 const STORAGE_KEY = 'theribbon_submissions_v1';
 
 export default function App() {
-  // Dual selected appliances: Default 2 flagship appliances
-  const [selectedProducts, setSelectedProducts] = useState<Product[]>([
-    PRODUCTS_DATA[0],
-    PRODUCTS_DATA[1],
-  ]);
+  // Dual selected appliances: starts at 0/2 selected matching reference
+  const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);
 
   const [submissions, setSubmissions] = useState<ApplicationSubmission[]>(() => {
     try {
@@ -117,25 +114,33 @@ export default function App() {
   // Dual Product Selection Handlers
   const handleToggleProduct = (product: Product, targetSlot?: 0 | 1) => {
     setSelectedProducts((prev) => {
+      // If already selected, deselect it
+      if (prev.some((p) => p.id === product.id)) {
+        return prev.filter((p) => p.id !== product.id);
+      }
       if (targetSlot === 0) {
-        return [product, prev[1] || PRODUCTS_DATA[1]];
+        return [product, ...(prev[1] ? [prev[1]] : [])];
       }
       if (targetSlot === 1) {
-        return [prev[0] || PRODUCTS_DATA[0], product];
+        return [...(prev[0] ? [prev[0]] : []), product];
       }
-      // Click toggle:
-      if (prev[0]?.id === product.id) {
-        // Toggle off slot 0 with another alternative
-        const alternative = PRODUCTS_DATA.find((p) => p.id !== prev[1]?.id && p.id !== product.id) || PRODUCTS_DATA[0];
-        return [alternative, prev[1]];
+      if (prev.length === 0) {
+        return [product];
       }
-      if (prev[1]?.id === product.id) {
-        // Toggle off slot 1 with another alternative
-        const alternative = PRODUCTS_DATA.find((p) => p.id !== prev[0]?.id && p.id !== product.id) || PRODUCTS_DATA[1];
-        return [prev[0], alternative];
+      if (prev.length === 1) {
+        const next = [prev[0], product];
+        // 2 items chosen: smoothly navigate to application form
+        setTimeout(() => {
+          handleApplyShortcut();
+        }, 600);
+        return next;
       }
-      // If none matched, replace slot 1
-      return [prev[0], product];
+      // If already 2 items selected, replace the 2nd item
+      const next = [prev[0], product];
+      setTimeout(() => {
+        handleApplyShortcut();
+      }, 600);
+      return next;
     });
   };
 
@@ -149,11 +154,8 @@ export default function App() {
 
   const handleRemoveProduct = (slotIndex: 0 | 1) => {
     setSelectedProducts((prev) => {
-      const otherSlot = slotIndex === 0 ? 1 : 0;
-      const otherId = prev[otherSlot]?.id;
-      const alternative = PRODUCTS_DATA.find((p) => p.id !== otherId && p.id !== prev[slotIndex]?.id) || PRODUCTS_DATA[slotIndex];
       const copy = [...prev];
-      copy[slotIndex] = alternative;
+      copy.splice(slotIndex, 1);
       return copy;
     });
   };

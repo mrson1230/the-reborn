@@ -209,7 +209,7 @@ export const LifeServiceSection: React.FC<LifeServiceSectionProps> = ({ onSelect
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                가전 전액지원 혜택을 이용 중이더라도, 인생의 중요한 순간(웨딩, 부모님 칠순 크루즈, 장례, 자녀 어학연수)이 생기면 언제든지 추가 부담금 없이 해당 라이프서비스로 전환하여 사용하실 수 있습니다.
+                가전 지원 혜택을 이용 중이더라도, 인생의 중요한 순간(웨딩, 부모님 칠순 크루즈, 장례, 자녀 어학연수)이 생기면 언제든지 추가 부담금 없이 해당 라이프서비스로 전환하여 사용하실 수 있습니다.
               </p>
             </div>
           </div>
@@ -288,7 +288,7 @@ export const LifeServiceSection: React.FC<LifeServiceSectionProps> = ({ onSelect
               <div className="text-[11px] text-slate-500 bg-amber-50 rounded-xl p-3 border border-amber-200/80 mb-5 flex items-start gap-2">
                 <HelpCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                 <span>
-                  가전 전액지원 멤버십 가입 후 언제든지 고객센터를 통해 본 {activeModalService.title} 서비스로 전환 이용 신청이 가능합니다.
+                  가전 지원 멤버십 가입 후 언제든지 고객센터를 통해 본 {activeModalService.title} 서비스로 전환 이용 신청이 가능합니다.
                 </span>
               </div>
 

@@ -29,7 +29,7 @@ export const TermsModal: React.FC<TermsModalProps> = ({ isOpen, onClose }) => {
           <div>
             <h4 className="font-bold text-slate-900 mb-1">1. 개인정보 수집 및 이용 목적</h4>
             <p>
-              (주)더리본은 삼성전자·LG전자 가전제품 전액지원 프로모션의 1:1 맞춤 무료 상담 제공,
+              (주)더리본은 삼성전자·LG전자 가전제품 지원 프로모션의 1:1 맞춤 무료 상담 제공,
               지원 자격 확인, 가전 배송 및 설치 일정 조율, 해피콜 진행을 위해 고객님의 개인정보를 수집 및 이용합니다.
             </p>
           </div>

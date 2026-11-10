@@ -20,7 +20,7 @@ export const FaqSection: React.FC = () => {
             자주 묻는 질문
           </h2>
           <p className="mt-2 text-slate-600 text-sm">
-            더리본 가전 전액지원 혜택에 대해 궁금하신 점을 확인해 보세요.
+            더리본 가전 지원 혜택에 대해 궁금하신 점을 확인해 보세요.
           </p>
         </div>
 

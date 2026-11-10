@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({
               }}
             />
             <span className="text-white font-extrabold text-base tracking-tight">더리본</span>
-            <span className="text-slate-500 text-xs">| 가전 전액지원 공식 프로모션</span>
+            <span className="text-slate-500 text-xs">| 가전 지원 공식 프로모션</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-4 text-xs">
@@ -84,24 +84,27 @@ export const Footer: React.FC<FooterProps> = ({
             <PhoneCall className="w-5 h-5 text-rose-500 shrink-0" />
             <div>
               <div className="font-bold text-slate-200">더리본 고객만족센터</div>
-              <div className="text-[11px] text-slate-400">1588-0000 (평일 09:00 ~ 18:00)</div>
+              <div className="text-[11px] text-slate-400">1644-3651 (평일 09:00 ~ 18:00)</div>
             </div>
           </div>
         </div>
 
         {/* Legal Text */}
-        <div className="space-y-1 text-[11px] text-slate-500 leading-relaxed">
+        <div className="space-y-1.5 text-[11px] text-slate-400 leading-relaxed">
           <p>
-            상호명: (주)더리본 · 대표이사: 송기호 · 사업자등록번호: 602-81-67822 · 통신판매업신고번호: 제 2017-서울강남-0012호
+            상호명: 더리본(주) &nbsp; 대표자: 박명하 &nbsp; 사업자등록번호: 605-81-92018
           </p>
           <p>
-            본사: 서울특별시 강남구 테헤란로 152 강남파이낸스센터 · 고객센터: 1588-0000 · 이메일: support@theribbon.co.kr
+            tel : 1644-3651 &nbsp; fax: 02-3447-3666
+          </p>
+          <p>
+            서울 본사 : 서울 성동구 성수일로 111, 9F 914호 (성수동, 선명스퀘어) / 부산 본사 : 부산 부산진구 자유평화로 11, 12F (범천동, W웨딩시티)
           </p>
           <p className="pt-2 text-slate-600">
-            * 본 사이트에서 제공하는 삼성전자 및 LG전자 가전제품 전액 지원 프로모션은 더리본 라이프케어 멤버십 제휴 결합 상품 기준이며, 가전제품의 소유권 및 무상 A/S 보증은 각 제조사 공식 정책에 따라 지원됩니다.
+            * 본 사이트에서 제공하는 삼성전자 및 LG전자 가전제품 지원 프로모션은 더리본 라이프케어 멤버십 제휴 결합 상품 기준이며, 가전제품의 소유권 및 무상 A/S 보증은 각 제조사 공식 정책에 따라 지원됩니다.
           </p>
           <p className="text-slate-600">
-            Copyright © (주)더리본 The Ribbon All rights reserved.
+            Copyright © 더리본(주) The Ribbon All rights reserved.
           </p>
         </div>
       </div>

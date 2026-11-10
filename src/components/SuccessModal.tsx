@@ -82,7 +82,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
 
   const handleCopyReceipt = () => {
     const p2Text = submission.product2Name ? `\n신청가전 ②: [${submission.product2Brand || 'LG전자'}] ${submission.product2Name}` : '';
-    const textToCopy = `[더리본 가전 2종 전액지원 접수증]\n접수번호: ${submission.applicationNumber}\n신청자: ${submission.userName}\n신청가전 ①: [${submission.productBrand}] ${submission.productName}${p2Text}\n지원혜택: 가전 2종 모두 본인부담금 0원 전액지원\n상담희망: ${submission.preferredTime}\n지역: ${submission.region}`;
+    const textToCopy = `[더리본 가전 2종 지원 접수증]\n접수번호: ${submission.applicationNumber}\n신청자: ${submission.userName}\n신청가전 ①: [${submission.productBrand}] ${submission.productName}${p2Text}\n지원혜택: 가전 2종 모두 본인부담금 0원 지원\n상담희망: ${submission.preferredTime}\n지역: ${submission.region}`;
     navigator.clipboard?.writeText?.(textToCopy);
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
@@ -156,7 +156,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
           <div className="flex items-center justify-between text-[11px] text-amber-800/80 mt-1.5">
             <span>수신 번호: {submission.phoneNumber}</span>
             <span className="font-medium">
-              {isDone ? '✓ 수신 성공 (발신: 1588-0000)' : '전송 대기열 순차 처리 중...'}
+              {isDone ? '✓ 수신 성공 (발신: 1644-3651)' : '전송 대기열 순차 처리 중...'}
             </span>
           </div>
         </div>
@@ -234,7 +234,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                 <div className="p-4 space-y-3 text-xs leading-relaxed">
                   <div className="pb-2 border-b border-slate-100">
                     <p className="font-extrabold text-sm text-slate-900 mb-1">
-                      [더리본] 가전 2종 100% 전액지원 상담 예약 완료
+                      [더리본] 가전 2종 100% 지원 상담 예약 완료
                     </p>
                     <p className="text-slate-600">
                       안녕하세요, <strong>{submission.userName}</strong> 고객님!
@@ -268,7 +268,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                     <div className="flex justify-between">
                       <span className="text-slate-400 font-medium">지원혜택</span>
                       <span className="font-bold text-emerald-700">
-                        가전 2종 모두 본인부담금 0원 (전액지원)
+                        가전 2종 모두 본인부담금 0원 (지원)
                       </span>
                     </div>
                     <div className="flex justify-between">
@@ -284,7 +284,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                   </div>
 
                   <div className="text-[11px] text-slate-500 leading-snug pt-1">
-                    * 전문 상담원이 순차적으로 안심 해피콜(발신번호: <strong>1588-0000</strong>)을 드릴 예정입니다.
+                    * 전문 상담원이 순차적으로 안심 해피콜(발신번호: <strong>1644-3651</strong>)을 드릴 예정입니다.
                     <br />
                     * 원활한 가전 2종 배송 및 설치 일정 조율을 위해 전화를 꼭 받아주세요.
                   </div>
@@ -319,7 +319,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
           {activeTab === 'sms' && (
             <div className="bg-slate-200/90 p-3 sm:p-4 rounded-2xl shadow-inner space-y-2">
               <div className="text-center text-[11px] text-slate-600 font-medium pb-1">
-                문자 메시지(LMS) · 발신: 1588-0000
+                문자 메시지(LMS) · 발신: 1644-3651
               </div>
 
               {/* SMS Bubble */}
@@ -330,13 +330,13 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                 </div>
 
                 <div className="font-bold text-sm text-slate-900">
-                  [더리본] 가전 2종 100% 전액지원 상담 접수 완료 안내
+                  [더리본] 가전 2종 100% 지원 상담 접수 완료 안내
                 </div>
 
                 <p className="text-slate-700">
                   안녕하세요, {submission.userName} 고객님.
                   <br />
-                  더리본 가전 2종 전액지원 이벤트 신청이 정상 처리되었습니다.
+                  더리본 가전 2종 지원 이벤트 신청이 정상 처리되었습니다.
                 </p>
 
                 <div className="p-2.5 bg-slate-50 rounded-lg font-mono text-[11px] text-slate-700 space-y-1 border border-slate-200">
@@ -351,13 +351,13 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                 </div>
 
                 <p className="text-[11px] text-slate-600">
-                  기재해주신 희망 시간대에 더리본 전문 상담원이 1588-0000 번호로 연락드립니다.
+                  기재해주신 희망 시간대에 더리본 전문 상담원이 1644-3651 번호로 연락드립니다.
                   <br />
                   기존 폐가전 무상수거 및 설치 일정 조율이 함께 진행됩니다.
                 </p>
 
                 <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                  <span>문의: 더리본 고객센터 1588-0000</span>
+                  <span>문의: 더리본 고객센터 1644-3651</span>
                   <button
                     type="button"
                     onClick={handleCopyReceipt}
@@ -388,7 +388,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                 </div>
                 <div className="min-w-0 flex-1">
                   <span className="text-[9px] font-bold text-rose-600 bg-rose-50 px-1 py-0.2 rounded border border-rose-200">
-                    가전 ① 전액지원
+                    가전 ① 지원
                   </span>
                   <p className="text-xs font-bold text-slate-900 truncate mt-0.5">
                     {submission.productName}
@@ -411,7 +411,7 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({
                   </div>
                   <div className="min-w-0 flex-1">
                     <span className="text-[9px] font-bold text-amber-700 bg-amber-50 px-1 py-0.2 rounded border border-amber-200">
-                      가전 ② 전액지원
+                      가전 ② 지원
                     </span>
                     <p className="text-xs font-bold text-slate-900 truncate mt-0.5">
                       {submission.product2Name}

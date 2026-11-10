@@ -5,9 +5,9 @@ export const BenefitsSection: React.FC = () => {
   const benefits = [
     {
       icon: <BadgePercent className="w-6 h-6 text-rose-600" />,
-      title: '01. 본인부담금 0원 전액지원',
+      title: '01. 본인부담금 0원 지원',
       headline: '초기비용, 선납금, 이자부담 ZERO',
-      desc: '시중가 200~300만원대 최신 가전제품을 별도 구매비용 없이 전액 지원받으실 수 있습니다. 목돈 부담 없이 원하는 프리미엄 가전을 집으로 들이세요.',
+      desc: '시중가 200~300만원대 최신 가전제품을 별도 구매비용 없이 지원받으실 수 있습니다. 목돈 부담 없이 원하는 프리미엄 가전을 집으로 들이세요.',
     },
     {
       icon: <Truck className="w-6 h-6 text-rose-600" />,

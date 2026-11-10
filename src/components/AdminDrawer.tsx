@@ -50,7 +50,7 @@ export const AdminDrawer: React.FC<AdminDrawerProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-300 mt-0.5">
-              실시간 접수된 가전 2종 전액지원 상담 신청 내역입니다. (보안인증 완료)
+              실시간 접수된 가전 2종 지원 상담 신청 내역입니다. (보안인증 완료)
             </p>
           </div>
           <button

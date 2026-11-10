@@ -1,6 +1,6 @@
 {
-  "name": "더리본 | 삼성·LG 가전제품 100% 전액지원",
-  "description": "더리본 최신 삼성전자·LG전자 프리미엄 가전제품 100% 전액지원 공식 프로모션. 본인부담금 0원, 공식 직배송 및 무상 설치, 간편 상담 예약.",
+  "name": "더리본 | 삼성·LG 가전제품 100% 지원",
+  "description": "더리본 최신 삼성전자·LG전자 프리미엄 가전제품 100% 지원 공식 프로모션. 본인부담금 0원, 공식 직배송 및 무상 설치, 간편 상담 예약.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

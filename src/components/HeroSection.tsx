@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, ArrowRight, CheckCircle2, Clock, ShieldCheck, Flame } from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle2, ShieldCheck, Flame } from 'lucide-react';
 import { TickerItem } from '../types';
 
 interface HeroSectionProps {
@@ -15,35 +15,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   // Live ticker active index
   const [tickerIndex, setTickerIndex] = useState(0);
-
-  // Dynamic countdown timer
-  const [timeLeft, setTimeLeft] = useState({
-    hours: 8,
-    minutes: 42,
-    seconds: 19,
-  });
-
-  // Qualification Mini-Check
-  const [ageCheck, setAgeCheck] = useState<string>('yes');
-  const [applianceNeed, setApplianceNeed] = useState<string>('fridge');
-  const [qualifyStatus, setQualifyStatus] = useState<boolean>(true);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: 59, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
 
   useEffect(() => {
     const tickerInterval = setInterval(() => {
@@ -90,7 +61,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-rose-700 bg-rose-50 border border-rose-200/70 px-2.5 py-1 rounded-md">
               <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-600 shrink-0" />
-              <span>삼성전자 · LG전자 공식 제휴 100% 전액지원</span>
+              <span>삼성전자 · LG전자 공식 제휴 가전지원</span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-950 leading-[1.25] text-balance">
@@ -110,7 +81,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
               <div className="p-3 bg-slate-50 border border-slate-100 rounded-lg">
                 <div className="text-xs text-slate-500">초기 구매비용</div>
-                <div className="text-lg font-bold text-slate-900 tabular-nums">0원 (전액지원)</div>
+                <div className="text-lg font-bold text-slate-900 tabular-nums">0원 (지원)</div>
               </div>
               <div className="p-3 bg-slate-50 border border-slate-100 rounded-lg">
                 <div className="text-xs text-slate-500">배송 및 설치비</div>
@@ -158,104 +129,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
 
-          {/* Right Column: High-Res Appliance Showcase Image + Interactive Quick Check Card */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10]">
+          {/* Right Column: High-Res Appliance Showcase Image (Expanded) */}
+          <div className="lg:col-span-5 h-full flex flex-col justify-center">
+            <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900 group h-full min-h-[420px] sm:min-h-[500px] lg:min-h-[560px] flex flex-col justify-end">
               <img
                 src="/assets/images/hero_home_appliances_living_1793774944397.jpg"
                 alt="삼성·LG 프리미엄 가전 풀세트 인테리어"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <div className="inline-block bg-rose-600 text-[11px] font-bold px-2 py-0.5 rounded mb-1">
-                  더리본 특별 혜택
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
+              <div className="relative p-6 sm:p-7 text-white z-10 space-y-2">
+                <div className="inline-flex items-center gap-1.5 bg-rose-600 text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>더리본 특별 공식 혜택</span>
                 </div>
-                <div className="text-base font-bold">삼성 & LG 최신 가전 라인업 완비</div>
-                <div className="text-xs text-slate-300">신청 즉시 전담 상담원 1:1 맞춤 배정</div>
-              </div>
-            </div>
-
-            {/* Quick Eligibility Mini Checker */}
-            <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
-              <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-rose-600" />
-                  <span className="text-xs font-bold text-slate-900">30초 가전 전액지원 자격 자가진단</span>
+                <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
+                  삼성 & LG 최신 가전 라인업 완비
                 </div>
-                <div className="flex items-center gap-1 text-[11px] text-slate-500 font-mono tabular-nums">
-                  <Clock className="w-3 h-3 text-slate-400" />
-                  <span>
-                    남은시간 {String(timeLeft.hours).padStart(2, '0')}:
-                    {String(timeLeft.minutes).padStart(2, '0')}:
-                    {String(timeLeft.seconds).padStart(2, '0')}
-                  </span>
-                </div>
-              </div>
-
-              <div className="pt-3 space-y-3">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-slate-600 font-medium">1. 신청자 연령이 만 25세 이상인가요?</span>
-                  <div className="flex items-center gap-1">
-                    <button
-                      type="button"
-                      onClick={() => setAgeCheck('yes')}
-                      className={`px-2.5 py-1 rounded text-xs font-medium cursor-pointer transition-colors ${
-                        ageCheck === 'yes' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600'
-                      }`}
-                    >
-                      예
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setAgeCheck('no')}
-                      className={`px-2.5 py-1 rounded text-xs font-medium cursor-pointer transition-colors ${
-                        ageCheck === 'no' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600'
-                      }`}
-                    >
-                      아니오
-                    </button>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-slate-600 font-medium">2. 가장 희망하는 가전 종류는?</span>
-                  <select
-                    value={applianceNeed}
-                    onChange={(e) => setApplianceNeed(e.target.value)}
-                    className="text-xs font-medium bg-slate-50 border border-slate-200 rounded px-2 py-1 text-slate-800 focus:outline-none focus:border-rose-500 cursor-pointer"
-                  >
-                    <option value="fridge">냉장고/김치냉장고</option>
-                    <option value="wash">워시타워/세탁기</option>
-                    <option value="tv">85인치 대화면 TV</option>
-                    <option value="air">무풍 에어컨 2in1</option>
-                    <option value="care">스타일러/로봇청소기</option>
-                    <option value="digital">노트북/디지털</option>
-                  </select>
-                </div>
-
-                {/* Instant Verification Result Banner */}
-                {ageCheck === 'yes' ? (
-                  <div className="p-2.5 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                      <span className="text-xs font-bold text-emerald-800">
-                        축하합니다! 100% 전액 지원 대상자입니다.
-                      </span>
-                    </div>
-                    <button
-                      onClick={onApplyShortcut}
-                      className="text-[11px] font-bold text-white bg-emerald-700 hover:bg-emerald-800 px-2 py-1 rounded transition-colors whitespace-nowrap cursor-pointer"
-                    >
-                      지원 확정하기
-                    </button>
-                  </div>
-                ) : (
-                  <div className="p-2.5 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800">
-                    만 25세 미만이신 경우 직계 가족 명의로 지원 신청이 가능합니다. 전문 상담원에게 문의해 주세요.
-                  </div>
-                )}
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-md">
+                  신청 즉시 전담 상담원 1:1 맞춤 배정 · 본사 직배송 무료 설치 및 무상 A/S 보증
+                </p>
               </div>
             </div>
           </div>

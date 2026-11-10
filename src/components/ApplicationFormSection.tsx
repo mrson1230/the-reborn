@@ -140,7 +140,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
 
     // Detailed Formspree payload with both selected appliances
     const formspreePayload = {
-      _subject: `[더리본 가전 2종 전액지원 상담신청] ${userName.trim()} (${phoneNumber}) - ① ${product1.name} + ② ${product2.name}`,
+      _subject: `[더리본 가전 2종 지원 상담신청] ${userName.trim()} (${phoneNumber}) - ① ${product1.name} + ② ${product2.name}`,
       applicationNumber: appNumber,
       customerName: userName.trim(),
       phoneNumber: phoneNumber,
@@ -156,7 +156,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
       product2Brand: product2.brandName,
       product2Model: product2.modelCode,
       product2Tier: product2.tierName,
-      customerCost: '0원 (가전 2종 모두 100% 전액지원)',
+      customerCost: '0원 (가전 2종 모두 100% 지원)',
       note: note.trim() || '없음',
       agreePrivacy: agreePrivacy ? '동의함' : '미동의',
       agreeMarketing: agreeMarketing ? '동의함' : '미동의',
@@ -169,7 +169,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
       설치희망지역: region,
       선택가전1_순위: `[${product1.brandName}] ${product1.name} (${product1.modelCode} / ${product1.tierName})`,
       선택가전2_순위: `[${product2.brandName}] ${product2.name} (${product2.modelCode} / ${product2.tierName})`,
-      가전2종_지원혜택: '가전 2개 품목 모두 본인부담금 0원 (100% 전액지원)',
+      가전2종_지원혜택: '가전 2개 품목 모두 본인부담금 0원 (100% 지원)',
       문의및요청사항: note.trim() || '없음',
       개인정보수집동의: '동의함',
       마케팅안내동의: agreeMarketing ? '동의함' : '미동의',
@@ -209,7 +209,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
 
       // Step 3: Counselor matching stage
       setConnectingProgress(85);
-      setConnectingStep('더리본 가전 2종 전액지원 전담 상담사 매칭 중...');
+      setConnectingStep('더리본 가전 2종 지원 전담 상담사 매칭 중...');
       await new Promise((resolve) => setTimeout(resolve, 550));
 
       // Step 4: Finished stage
@@ -273,12 +273,50 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Form Title */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100/70 text-rose-700 text-xs font-bold mb-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100/70 text-rose-700 text-xs font-bold mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>선착순 가전 2종 100% 전액 지원 간편 신청</span>
+            <span>선착순 가전 2종 가전지원 간편 신청</span>
           </div>
+
+          {/* 가입 대상 사전 확인 카드 (사용자 첨부 이미지 디자인 완벽 반영) */}
+          <div className="max-w-2xl mx-auto mb-6 bg-[#EDF3FF] border border-[#CBDCFE] rounded-2xl p-5 sm:p-6 text-left shadow-xs">
+            <h3 className="text-base sm:text-lg font-bold text-[#1E40AF] mb-3.5">
+              가입 대상을 먼저 확인해 주세요
+            </h3>
+            <ul className="space-y-2.5 mb-4">
+              <li className="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-slate-900">
+                <span className="w-5 h-5 rounded-full bg-[#2563EB] flex items-center justify-center shrink-0 text-white">
+                  <Check className="w-3.5 h-3.5 stroke-[3]" />
+                </span>
+                <span>본인 명의 신용카드로 결제 가능하신 분</span>
+              </li>
+              <li className="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-slate-900">
+                <span className="w-5 h-5 rounded-full bg-[#2563EB] flex items-center justify-center shrink-0 text-white">
+                  <Check className="w-3.5 h-3.5 stroke-[3]" />
+                </span>
+                <span>본인 명의 휴대폰을 사용하시는 분</span>
+              </li>
+              <li className="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-slate-900">
+                <span className="w-5 h-5 rounded-full bg-[#2563EB] flex items-center justify-center shrink-0 text-white">
+                  <Check className="w-3.5 h-3.5 stroke-[3]" />
+                </span>
+                <span>신용 결격 사유가 없는 분 (연체·채무불이행 등)</span>
+              </li>
+              <li className="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-slate-900">
+                <span className="w-5 h-5 rounded-full bg-[#2563EB] flex items-center justify-center shrink-0 text-white">
+                  <Check className="w-3.5 h-3.5 stroke-[3]" />
+                </span>
+                <span>만 25세 이상 70세 미만</span>
+              </li>
+            </ul>
+            <div className="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed space-y-0.5 pt-1">
+              <p>위 조건에 해당하지 않으면 상담 후에도 가입이 진행되지 않습니다.</p>
+              <p>조건을 확인하신 뒤 신청해 주세요.</p>
+            </div>
+          </div>
+
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight text-balance">
-            가전제품 2종 전액지원 무료 상담 예약
+            가전제품 2종 지원 무료 상담 예약
           </h2>
           <p className="mt-2 text-slate-600 text-sm">
             원하시는 가전 2종을 확인하시고 신청서를 남겨주시면 전담 상담원이 30분 이내 순차적으로 안심 전화를 드립니다.
@@ -293,7 +331,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" />
                 <span className="font-extrabold text-sm sm:text-base text-white">
-                  선택된 지원 가전 (총 2종 100% 전액지원)
+                  선택된 지원 가전 (총 2종 100% 지원)
                 </span>
               </div>
               {onGoToLineup && (
@@ -615,8 +653,8 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
                 className="w-12 h-12 rounded-full object-cover border border-slate-300 shrink-0"
               />
               <div className="text-xs text-slate-600">
-                <span className="font-bold text-slate-900">더리본 가전 2종 전액지원 안심 보증:</span>{' '}
-                고객님의 소중한 개인정보는 1:1 전액지원 가전 심사 및 상담 예약 목적으로만 안전하게 256비트 암호화 관리됩니다.
+                <span className="font-bold text-slate-900">더리본 가전 2종 지원 안심 보증:</span>{' '}
+                고객님의 소중한 개인정보는 1:1 지원 가전 심사 및 상담 예약 목적으로만 안전하게 256비트 암호화 관리됩니다.
               </div>
             </div>
 
@@ -695,7 +733,7 @@ export const ApplicationFormSection: React.FC<ApplicationFormSectionProps> = ({
                 ) : (
                   <>
                     <PhoneCall className="w-5 h-5" />
-                    <span>가전 2종 100% 전액지원 무료 상담 신청하기</span>
+                    <span>가전 2종 100% 지원 무료 상담 신청하기</span>
                   </>
                 )}
               </button>

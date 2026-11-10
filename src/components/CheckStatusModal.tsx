@@ -164,7 +164,7 @@ export const CheckStatusModal: React.FC<CheckStatusModalProps> = ({
                     <div className="min-w-0 flex-1">
                       <div className="text-[10px] font-bold text-rose-600 flex items-center gap-1">
                         <span>가전 ①</span>
-                        <span>[{item.productBrand}] 100% 전액지원</span>
+                        <span>[{item.productBrand}] 100% 지원</span>
                       </div>
                       <div className="font-bold text-xs text-slate-900 truncate">
                         {item.productName}
@@ -189,7 +189,7 @@ export const CheckStatusModal: React.FC<CheckStatusModalProps> = ({
                       <div className="min-w-0 flex-1">
                         <div className="text-[10px] font-bold text-amber-600 flex items-center gap-1">
                           <span>가전 ②</span>
-                          <span>[{item.product2Brand}] 100% 전액지원</span>
+                          <span>[{item.product2Brand}] 100% 지원</span>
                         </div>
                         <div className="font-bold text-xs text-slate-900 truncate">
                           {item.product2Name}

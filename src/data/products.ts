@@ -35,7 +35,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -60,7 +60,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -85,7 +85,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -110,7 +110,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -135,7 +135,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -160,7 +160,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -185,7 +185,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -210,7 +210,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -235,7 +235,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -260,7 +260,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -285,7 +285,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -310,7 +310,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -335,7 +335,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -360,7 +360,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -385,7 +385,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -410,7 +410,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -435,7 +435,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -460,7 +460,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -485,7 +485,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -510,7 +510,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -535,7 +535,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,500,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -560,7 +560,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 다이아몬드",
     "tag": "더리본 트리플 다이아몬드 지원 상품",
     "originalPrice": "3,200,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -585,7 +585,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -609,7 +609,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -633,7 +633,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -657,7 +657,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -681,7 +681,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -705,7 +705,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -729,7 +729,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "3,150,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -753,7 +753,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -777,7 +777,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -801,7 +801,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,490,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -826,7 +826,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "3,150,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -851,7 +851,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -875,7 +875,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -899,7 +899,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,850,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -923,7 +923,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,490,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -947,7 +947,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,490,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -971,7 +971,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,490,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -995,7 +995,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,490,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1019,7 +1019,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,490,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1043,7 +1043,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,490,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1067,7 +1067,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 골드",
     "tag": "더리본 트리플 골드 지원 상품",
     "originalPrice": "2,490,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1091,7 +1091,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1115,7 +1115,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1139,7 +1139,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1163,7 +1163,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1187,7 +1187,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1211,7 +1211,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1235,7 +1235,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1260,7 +1260,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "2,650,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1285,7 +1285,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1309,7 +1309,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1333,7 +1333,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1357,7 +1357,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1381,7 +1381,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1406,7 +1406,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1431,7 +1431,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1455,7 +1455,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1479,7 +1479,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1503,7 +1503,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1527,7 +1527,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1551,7 +1551,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1575,7 +1575,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1599,7 +1599,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1623,7 +1623,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1647,7 +1647,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1671,7 +1671,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1695,7 +1695,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1719,7 +1719,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1743,7 +1743,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1767,7 +1767,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1791,7 +1791,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "트리플 실버",
     "tag": "더리본 트리플 실버 지원 상품",
     "originalPrice": "1,980,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1815,7 +1815,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 다이아몬드",
     "tag": "더리본 더블 다이아몬드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1839,7 +1839,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1864,7 +1864,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1888,7 +1888,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1912,7 +1912,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,590,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1936,7 +1936,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1960,7 +1960,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -1984,7 +1984,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2009,7 +2009,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2033,7 +2033,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2057,7 +2057,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2082,7 +2082,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2106,7 +2106,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2130,7 +2130,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2154,7 +2154,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2178,7 +2178,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,590,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2202,7 +2202,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2226,7 +2226,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2250,7 +2250,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2274,7 +2274,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2298,7 +2298,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2322,7 +2322,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2346,7 +2346,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2370,7 +2370,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2394,7 +2394,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2418,7 +2418,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2442,7 +2442,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2466,7 +2466,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2491,7 +2491,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2515,7 +2515,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2539,7 +2539,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2563,7 +2563,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2587,7 +2587,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2612,7 +2612,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2636,7 +2636,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2660,7 +2660,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2684,7 +2684,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2708,7 +2708,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2732,7 +2732,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 골드",
     "tag": "더리본 더블 골드 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2756,7 +2756,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2780,7 +2780,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2804,7 +2804,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2828,7 +2828,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2852,7 +2852,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2877,7 +2877,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2901,7 +2901,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2925,7 +2925,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2950,7 +2950,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2974,7 +2974,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -2998,7 +2998,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3022,7 +3022,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3046,7 +3046,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3070,7 +3070,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3094,7 +3094,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3118,7 +3118,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3142,7 +3142,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3166,7 +3166,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3190,7 +3190,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3214,7 +3214,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3238,7 +3238,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3262,7 +3262,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3286,7 +3286,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3310,7 +3310,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3334,7 +3334,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3358,7 +3358,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3382,7 +3382,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3406,7 +3406,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3430,7 +3430,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3454,7 +3454,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3478,7 +3478,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3502,7 +3502,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3526,7 +3526,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3550,7 +3550,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3574,7 +3574,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3598,7 +3598,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3622,7 +3622,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3646,7 +3646,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3670,7 +3670,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3694,7 +3694,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3718,7 +3718,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3742,7 +3742,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3766,7 +3766,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3790,7 +3790,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3814,7 +3814,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3839,7 +3839,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3863,7 +3863,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3887,7 +3887,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3911,7 +3911,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3935,7 +3935,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3959,7 +3959,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -3983,7 +3983,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4007,7 +4007,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4031,7 +4031,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 실버",
     "tag": "더리본 더블 실버 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4055,7 +4055,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "더블 브론즈",
     "tag": "더리본 더블 브론즈 지원 상품",
     "originalPrice": "1,290,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4079,7 +4079,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4103,7 +4103,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4127,7 +4127,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4151,7 +4151,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4176,7 +4176,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4200,7 +4200,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4224,7 +4224,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4248,7 +4248,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4272,7 +4272,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4296,7 +4296,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4320,7 +4320,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4344,7 +4344,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4368,7 +4368,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4392,7 +4392,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4416,7 +4416,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4440,7 +4440,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4464,7 +4464,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4488,7 +4488,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4512,7 +4512,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4536,7 +4536,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4560,7 +4560,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4584,7 +4584,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4608,7 +4608,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4632,7 +4632,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4656,7 +4656,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4680,7 +4680,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4704,7 +4704,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4728,7 +4728,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4752,7 +4752,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4776,7 +4776,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4800,7 +4800,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4824,7 +4824,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [
@@ -4848,7 +4848,7 @@ export const PRODUCTS_DATA: Product[] = [
     "tierName": "싱글 실버",
     "tag": "더리본 싱글 실버 지원 상품",
     "originalPrice": "890,000원",
-    "supportBenefit": "100% 전액지원",
+    "supportBenefit": "100% 지원",
     "customerCost": "0원",
     "monthlySupport": "본인부담금 0원 / 만기 100% 전액 환급",
     "specs": [

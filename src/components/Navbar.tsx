@@ -46,7 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="text-xl font-bold tracking-tight text-slate-900 whitespace-nowrap shrink-0 flex items-center gap-1.5">
               <span>더리본</span>
               <span className="text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-                가전전액지원
+                가전지원
               </span>
             </span>
           </a>
@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => scrollToSection('benefits')}
             className="hover:text-rose-600 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
           >
-            전액지원 혜택
+            지원 혜택
           </button>
           <button
             onClick={() => scrollToSection('reviews')}
@@ -169,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => scrollToSection('benefits')}
             className="w-full text-left py-2 text-sm font-medium text-slate-700 hover:text-rose-600"
           >
-            전액지원 혜택 안내
+            지원 혜택 안내
           </button>
           <button
             onClick={() => scrollToSection('reviews')}

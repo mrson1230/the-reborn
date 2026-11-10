@@ -17,3 +17,24 @@
 .animate-soft-glow {
   animation: soft-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+/* Infinite continuous marquee sliding to the left */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 48s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-left.paused,
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
+
